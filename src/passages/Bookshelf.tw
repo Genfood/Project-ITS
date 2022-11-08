@@ -1,0 +1,7 @@
+:: bookshelf {"position":"200,275"}
+
+# You are at the bookshelf
+
+[[office->office]]
+[[book->book]]
+[[inventory->inventory]]

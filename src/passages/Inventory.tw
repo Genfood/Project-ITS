@@ -1,0 +1,9 @@
+:: inventory {"position":"700,200"}
+
+[[pc->pc]]
+[[book->book]]
+[[lab->lab]]
+[[desk->desk]]
+[[bookshelf->bookshelf]]
+[[book->book]]
+[[officeContainer->officeContainer]]
