@@ -1,0 +1,4 @@
+:: Story Stylesheet [stylesheet]
+tw-icon[title="Undo"], tw-icon[title="Redo"] {
+    display: none;
+}#
