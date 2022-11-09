@@ -1,0 +1,12 @@
+:: setUp
+
+
+(live: 50ms)[
+    <!--Put all set up user questions here:-->
+    (set: $name to (prompt: "Enter your name working slave:", ""))
+    <!--Check if inputs are valid...-->
+    (unless: $name is "")[
+        (stop:)
+        (goto: "prologue")
+        ]
+]
