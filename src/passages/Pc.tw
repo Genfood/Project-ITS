@@ -1,4 +1,20 @@
 :: pc {"position":"400,0"}
+==>
+[[inventory->inventory]]
+<==
+#a fucking old and slow pc
+
+You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.
+<!--The variable '$usedItem' contains the item the user clicked on. Set it always to  0, if you dont use it, to avoid missunderstandings in other passages. -->
+\(unless: $usedItem is 0)[\
+\(if: $usedItem is "USB Stick") [\
+\You fiddle around with the USB stick on the PC case. After you have turned the stick three times, it finally fits in.
+\]
+\(else-if: $usedItem is "CD")
+\[The CD looks pretty scratched...]
+\(else: )[Nice idea, but you'd probably have similar success with a banana.]
+\]
+(set: $usedItem to 0)
+
 
 [[lab->lab]]
-[[inventory->inventory]]

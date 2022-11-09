@@ -1,5 +1,24 @@
 :: inventory {"position":"700,200"}
+<!-- ignore error -->
+(set: _lastPassage to (history:)'s last)
 
+(set: $inventory to (a: "USB Stick", "CD", "a randome note"))
+
+#Inventory
+
+(unless: $inventory is 0) [
+    You have the following items in your inventory: <!--(joined: ", ", ...$inventory)-->
+
+    (for: each _item, ...$inventory) [(link: "_item")[\
+        (set: $usedItem to _item)\
+        (goto: _lastPassage)](unless: $inventory's last is _item)[, ]]
+] (else:) [
+    Your inventory is empty. 🥺
+]
+
+[[Go back->_lastPassage]]
+
+<!--
 [[pc->pc]]
 [[book->book]]
 [[lab->lab]]
@@ -7,3 +26,4 @@
 [[bookshelf->bookshelf]]
 [[book->book]]
 [[officeContainer->officeContainer]]
+-->
