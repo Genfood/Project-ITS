@@ -1,4 +1,27 @@
 :: officeContainer {"position":"0,400"}
+(unless: $officeContainerIsUnlocked)[\
+    (set: _code to (prompt: "Enter the code:", ""))\
+    (if:_code is "")[(set: $officeContainerIsUnlocked to true)]\
+    (else:)[(goto: "office")]
+]
 
+
+[a random Note]<drawer2|
+
+(click-replace: ?drawer2)[(hide:?drawer2)(set: $inventory to it + (a:"Note 2"))]\
+($inventoryItem: "Note 22")
+
+$officeContainerIsUnlocked[#Test text liugsdfpizawg]
+($theItGuy:"Junge was machst du hier verpiss dich von meinem Bier!!!!!")
+
+(set: _drawer1 to (a: ($inventoryItem: "Note 22"), ($inventoryItem: "Note 21")))
+
+(for: each _i, ..._drawer1)[(unless: $inventory contains _i)[_i(unless: _drawer1's last is _i)[, ]]]
+(for: each _i, ..._drawer1)[_i]
+
+
+
+
+(set: _drawers to (a: _drawer1))
 [[office->office]]
 [[inventory->inventory]]

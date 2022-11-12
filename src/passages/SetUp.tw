@@ -1,5 +1,30 @@
 :: setUp
 
+<!--Variable set up here:-->
+(set: $officeContainerIsUnlocked to false)
+(set: $inventory to (a:))
+
+<!--macro set up here:-->
+(set: $theItGuy to (macro: str-type _bubbleText, [
+    (output:)[<div class="bubble bubble-bottom-left" contenteditable>_bubbleText</div>\
+    <img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />]
+]))
+<!--Prints one inventory item-->
+(set: $inventoryItem to (macro: str-type _item, [
+    (output:)[\
+    (hook: _item)[_item]\
+        (click-replace: (hooks-named:_item))[(set: $inventory to it + (a:_item))]\
+    ]
+]))
+(set: $inventoryItem to (macro: array-type _items, [
+    (output:)[\
+    (hook: _item)[_item]\
+        (click-replace: (hooks-named:_item))[(set: $inventory to it + (a:_item))]\
+    ]
+]))
+
+<!--only debug! set preffered passage here:-->
+(goto: "office")
 
 (live: 50ms)[
     <!--Put all set up user questions here:-->

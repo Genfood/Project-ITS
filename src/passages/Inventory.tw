@@ -2,7 +2,6 @@
 <!-- ignore error -->
 (set: _lastPassage to (history:)'s last)
 
-(set: $inventory to (a: "USB Stick", "CD", "a randome note"))
 
 #Inventory
 
