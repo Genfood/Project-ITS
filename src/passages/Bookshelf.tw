@@ -1,6 +1,21 @@
 :: bookshelf {"position":"200,275"}
 
-# You are at the bookshelf
+## You are standing in front of the bookshelf
+
+The bookshelf is this boring IKEA thing everbody has in their apartment. It´s filled with a bunch of books and magazines.
+A few of them jump into your eye:
+
+- Caeser-Chiffre: A simpler guide to the simplest encryption ever 
+- Playboy issue #7 of 1986
+- Diffie-Hellmann for Dummies
+- RSA: have fun
+- A magazine for rifles
+- How to hash important stuff like passwords
+- A Nature Lifestlye magazin called "Fish and Flesh"
+- The Gold Bug by Edgar Allan Poe 
+
+Some of them seem more interesting to you than others...
+Remember your mission: You need to learn about Cryptography!
 
 [[office->office]]
 [[book->book]]
