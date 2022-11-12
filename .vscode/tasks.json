@@ -20,7 +20,7 @@
 				"echo": true,
 				"reveal": "always",
 				"focus": true,
-				"panel": "new"
+				"panel": "shared"
 			}
         },
         {
@@ -41,7 +41,7 @@
 				"echo": true,
 				"reveal": "always",
 				"focus": true,
-				"panel": "new"
+				"panel": "shared"
 			}
         }
     ]
