@@ -10,7 +10,7 @@ You are sitting in front of a really old looking PC, it smells slithly, but you 
 \(if: $usedItem is "USB Stick") [\
 \You fiddle around with the USB stick on the PC case. After you have turned the stick three times, it finally fits in.
 \]
-\(else-if: $usedItem is "CD")
+\(else-if: $usedItem's name is "CD")
 \[The CD looks pretty scratched...]
 \(else: )[Nice idea, but you'd probably have similar success with a banana.]
 \]

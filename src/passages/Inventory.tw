@@ -1,19 +1,40 @@
 :: inventory {"position":"700,200"}
-<!-- ignore error -->
-(set: _lastPassage to (history:)'s last)
-
-
+(set: _lastPassage to (history:)'s last)\
+<!--(set: $inventory to it + (a: (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", false)))\-->
 #Inventory
+{
+    (unless: $inventory's length is 0) [
+You have the following items in your inventory: <!--(joined: ", ", ...$inventory)-->
 
-(unless: $inventory is 0) [
-    You have the following items in your inventory: <!--(joined: ", ", ...$inventory)-->
+        (for: each _item, ...$inventory) [{
+            (set: _display to _item's displayText)
+            (set: _isUsable to _item's isUsable)
+            (set: _isExternalLink to _item's isExternalLink)
+            (set: _description to _item's description)
+            * (link-rerun: _display)[
+                (if: _isUsable) [
+                    (dialog: [_description], "Go for it ...")
+                    (set: $usedItem to _item)
+                    (goto: _lastPassage)
+                ] (else-if: _isExternalLink) [
+                    (open-url: _description)
+                ] (else:)[
+                    (dialog: [_description], "Ahhhhhh ...")
+                ]
+                
+                ]<!--(unless: $inventory's last is _item)[, ]-->
+        }]
+    ] (else:) [
+        Your inventory is empty. 🥺\
+    ]
+}
+<!--YOLO das kaka tool kann keine listen in schleifen erstellen, macht halt sinn ...-->
+<style>
+ul {
+    margin: 0;
+}
+</style>
 
-    (for: each _item, ...$inventory) [(link: "_item")[\
-        (set: $usedItem to _item)\
-        (goto: _lastPassage)](unless: $inventory's last is _item)[, ]]
-] (else:) [
-    Your inventory is empty. 🥺
-]
 
 [[Go back->_lastPassage]]
 
