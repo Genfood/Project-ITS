@@ -37,12 +37,21 @@
         ] (else:) [(hide: (hooks-named:_item))]]\
     ]
 ]))
-<!--Prints all inventory items in the given array-->
-(set: $inventoryItemsLi to (macro: array-type _items, [
-    (output:)[\
-    (for: each _item, ..._items)[ * (hook: _item)[_item](click-replace: (hooks-named:_item))[(set: $inventory to it + (a:_item))]]]
+<!--cheks for a given key, if the inventory contains it.-->
+(set: $doesInvContain to (macro: str-type _name, [
+    (set: _isInInv to false)
+    (for: each _item, ...$inventory) [
+        (set: _n to _item's name)
+        (if: _n is _name) [
+            (set: _isInInv to true)
+        ]
+    ]
+    (output-data: _isInInv)
 ]))
 
+<!--define inventory items here, it is not a must, but could be handy in some cases.-->
+
+(set: $invNoteCaeserCipher to (dm: "displayText", "An important note", "name", "noteImportant", "description", "...", "isExternalLink", false, "isUsable", false))\
 
 <!--only debug! set preffered passage here:-->
 (goto: "office")
