@@ -2,26 +2,41 @@
 (unless: $officeContainerIsUnlocked)[\
     (set: _code to (prompt: "Enter the code:", ""))\
     (if:_code is "")[(set: $officeContainerIsUnlocked to true)]\
-    (else:)[(goto: "office")]
+    (else:)[(goto: "office")]\
+]\
+==>
+[[inventory->inventory]]
+<==
+$officeContainerIsUnlocked[\
+    #Test]\
+\
+\
+\
+\
+(set: _book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false))\
+(set: _book2 to (dm: "displayText", "Buch Nummer 2", "name", "book2", "description", "", "isExternalLink", false, "isUsable", false))\
+(set: _note1 to (dm: "displayText", "Ein zerknüllter Zettel", "name", "note1", "description", "", "isExternalLink", false, "isUsable", false))\
+(set: _note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false))\
+(set: _note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false))\
+(set: _note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false))\
+{
+    (set: _cd to (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", true))
+}
+|drawer1>[\
+* ($inventoryItem: _book1)
+* ($inventoryItem: _book2)
+(link-rerun: "Schublade drunter herrausziehen")[(show: ?drawer2)(hide: ?drawer1)]\
+]\
+|drawer2)[\
+* ($inventoryItem: _note1)
+* ($inventoryItem: _note2)
+* ($inventoryItem: _note3)
+* ($inventoryItem: _note4)
+* ($inventoryItem: _cd)
+(link-rerun: "Schublade darüber herrausziehen")[(show: ?drawer1)(hide: ?drawer2)]\
 ]
 
 
-[a random Note]<drawer2|
-
-(click-replace: ?drawer2)[(hide:?drawer2)(set: $inventory to it + (a:"Note 2"))]\
-($inventoryItem: "Note 22")
-
-$officeContainerIsUnlocked[#Test text liugsdfpizawg]
-($theItGuy:"Junge was machst du hier verpiss dich von meinem Bier!!!!!")
-
-(set: _drawer1 to (a: ($inventoryItem: "Note 22"), ($inventoryItem: "Note 21")))
-
-(for: each _i, ..._drawer1)[(unless: $inventory contains _i)[_i(unless: _drawer1's last is _i)[, ]]]
-(for: each _i, ..._drawer1)[_i]
-
-
-
-
-(set: _drawers to (a: _drawer1))
-[[office->office]]
-[[inventory->inventory]]
+($theItGuy:"Junge was machst du hier verpiss dich von meinem Bier!!!!!", "guy1")(hide: ?guy1)\
+($theItGuy:"Junge was machst du hier verpiss dich von meinem Bier!!!!!", "guy2")
+[[fuck this shit, what's else in the office->office]]

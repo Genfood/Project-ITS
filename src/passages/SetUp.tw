@@ -4,24 +4,54 @@
 (set: $officeContainerIsUnlocked to false)
 (set: $inventory to (a:))
 
+<!--Data Map type set up here:-->
+(set: $inventoryItemType to (dm: "displayText", str, "name", str, "description", str, "isExternalLink", bool, "isUsable", bool))
+
 <!--macro set up here:-->
-(set: $theItGuy to (macro: str-type _bubbleText, [
-    (output:)[<div class="bubble bubble-bottom-left" contenteditable>_bubbleText</div>\
-    <img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />]
+<!--renders a fat IT guy-->
+(set: $theItGuy to (macro: str-type _bubbleText, str-type _id, [
+    (output:)[\
+        (hook: _id)[\
+            <div class="bubble bubble-bottom-left" contenteditable>_bubbleText</div>
+            <img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />\
+        ]
+    ]
 ]))
+
 <!--Prints one inventory item-->
-(set: $inventoryItem to (macro: str-type _item, [
+(set: $inventoryItem to (macro: $inventoryItemType-type _item, [
+    (set: _display to _item's displayText)\
+    (set: _id to _item's name)\
     (output:)[\
-    (hook: _item)[_item]\
-        (click-replace: (hooks-named:_item))[(set: $inventory to it + (a:_item))]\
+    (hook: _id)[_display]\
+        (click-replace: (hooks-named:_id))[(set: $inventory to it + (a:_item))]\
     ]
 ]))
-(set: $inventoryItem to (macro: array-type _items, [
+<!--Prints all inventory items in the given array-->
+(set: $inventoryItems to (macro: array-type _items, [
     (output:)[\
-    (hook: _item)[_item]\
-        (click-replace: (hooks-named:_item))[(set: $inventory to it + (a:_item))]\
+    (for: each _item, ..._items)[\
+        (hook: _item)[_item(unless: _items's last is _item)[,]]\
+        (unless: _item is in $inventory) [\
+            (click-replace: (hooks-named:_item))[(set: $inventory to it + (a:_item))]\
+        ] (else:) [(hide: (hooks-named:_item))]]\
     ]
 ]))
+<!--cheks for a given key, if the inventory contains it.-->
+(set: $doesInvContain to (macro: str-type _name, [
+    (set: _isInInv to false)
+    (for: each _item, ...$inventory) [
+        (set: _n to _item's name)
+        (if: _n is _name) [
+            (set: _isInInv to true)
+        ]
+    ]
+    (output-data: _isInInv)
+]))
+
+<!--define inventory items here, it is not a must, but could be handy in some cases.-->
+
+(set: $invNoteCaeserCipher to (dm: "displayText", "An important note", "name", "noteImportant", "description", "...", "isExternalLink", false, "isUsable", false))\
 
 <!--only debug! set preffered passage here:-->
 (goto: "office")

@@ -1,7 +1,36 @@
 :: office {"position":"0,200"}
+==>
+[[inventory->inventory]]
+<==
+#Dingy office of your predecessor
+The smell of your predecessor is still in the air...
 
+||==
+|desk>[<img class="floating" src="../src/images/desk.jpeg"/>]
+|noteImp>[{(click-replace:?noteImp) [(set: $inventory to it + (a: $invNoteCaeserCipher))]
+    <img id="note-imp" src="../src/images/note_important.png">
+    (if: ($doesInvContain: "noteImportant")) [
+        (hide: ?noteImp)
+    ]}]
+=|
+[[<img class="floating" src="../src/images/office-container.png"/>->officeContainer]]
+|==|
+
+<style>
+.floating {
+    max-width:100%;
+    max-height:100%;
+}
+
+#note-imp {
+    top: -40%;
+    left: 12%;
+    max-width: 10%;
+    max-height: 10%;
+}
+</style>
 [[lab->lab]]
 [[bookshelf->bookshelf]]
 [[desk->desk]]
 [[officeContainer->officeContainer]]
-[[inventory->inventory]]
+
