@@ -3,20 +3,51 @@
 [[inventory->inventory]]
 <==
 #a fucking old and slow pc
-
+(set: _cdContent to (a: "RSA file.key", "OTP file.data", "file"))
 You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.
+
+|cdContent)[(for: each _item, ..._cdContent)[-rw-------    1 Thomas  staff      25 18 Okt 22:01 _item<br>]]
+$name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></div>
 <!--The variable '$usedItem' contains the item the user clicked on. Set it always to  0, if you dont use it, to avoid missunderstandings in other passages. -->
 \(unless: $usedItem is 0)[\
-\(if: $usedItem is "USB Stick") [\
+\(if: $usedItem's name is  is "USB Stick") [\
 \You fiddle around with the USB stick on the PC case. After you have turned the stick three times, it finally fits in.
 \]
-\(else-if: $usedItem's name is "CD")
-\[The CD looks pretty scratched...]
+\(else-if: $usedItem's name is "CD") [\
+    The CD looks pretty scratched...(show: ?cdContent)
+    (t8n: "slide-left")+(t8n-delay:3s)[\
+        ($theItGuy: "Try the open command on some of the files... retard...", "dudeOpenPromt")\
+        ]\
+    ]\
 \(else: )[Nice idea, but you'd probably have similar success with a banana.]
 \]
 (set: $usedItem to 0)
 ==>
 [<div class="bubble bubble-bottom-left" contenteditable>Yo dude I don't remember exactly where I left it, but you need a USB stick.</div>
-<img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]]<dude|
+<img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]](dude|
 
 [[lab->lab]]
+(set: $toggleOnKeyDown to 0)
+<script>
+var keyDown = function(evt) {
+    var div = $('#input-line');
+
+    evt = evt || window.event;
+    var charCode = evt.which || evt.keyCode;
+    //alert(charCode);
+    if (charCode == 8) {
+        div.text(div.text().slice(0, -1));
+        return;
+    }
+    if (charCode == 13) {
+        // enter
+        var text = div.text();
+        var cmds = text.split(" ");
+        div.text("");
+        return;
+    }
+    var charStr = String.fromCharCode(charCode);
+    div.text(div.text() + charStr);
+};
+window.onkeydown = keyDown;
+</script>

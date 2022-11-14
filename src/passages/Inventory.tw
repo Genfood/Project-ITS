@@ -47,3 +47,6 @@ ul {
 [[book->book]]
 [[officeContainer->officeContainer]]
 -->
+<script>
+window.onkeydown = null;
+</script>
