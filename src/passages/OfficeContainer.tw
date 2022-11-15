@@ -19,9 +19,6 @@ $officeContainerIsUnlocked[\
 (set: _note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false))\
 (set: _note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false))\
 (set: _note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false))\
-{
-    (set: _cd to (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", true))
-}
 |drawer1>[\
 * ($inventoryItem: _book1)
 * ($inventoryItem: _book2)
@@ -32,7 +29,7 @@ $officeContainerIsUnlocked[\
 * ($inventoryItem: _note2)
 * ($inventoryItem: _note3)
 * ($inventoryItem: _note4)
-* ($inventoryItem: _cd)
+* ($inventoryItem: $cd)
 (link-rerun: "Schublade darüber herrausziehen")[(show: ?drawer1)(hide: ?drawer2)]\
 ]
 

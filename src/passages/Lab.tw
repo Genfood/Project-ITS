@@ -3,3 +3,6 @@
 [[office->office]]
 [[pc->pc]]
 [[inventory->inventory]]
+<script>
+window.onkeydown = null;
+</script>

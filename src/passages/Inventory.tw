@@ -11,8 +11,8 @@ You have the following items in your inventory: <!--(joined: ", ", ...$inventory
             (set: _isUsable to _item's isUsable)
             (set: _isExternalLink to _item's isExternalLink)
             (set: _description to _item's description)
-            * (link-rerun: _display)[
-                (if: _isUsable) [
+            * (link-rerun: _display)[ <!--maybe change this to the inventory item-->
+                (if: _isUsable)+(if: _lastPassage is "pc")[
                     (dialog: [_description], "Go for it ...")
                     (set: $usedItem to _item)
                     (goto: _lastPassage)
@@ -47,3 +47,6 @@ ul {
 [[book->book]]
 [[officeContainer->officeContainer]]
 -->
+<script>
+window.onkeydown = null;
+</script>

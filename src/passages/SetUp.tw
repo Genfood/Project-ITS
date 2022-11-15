@@ -7,6 +7,7 @@
 <!--Data Map type set up here:-->
 (set: $inventoryItemType to (dm: "displayText", str, "name", str, "description", str, "isExternalLink", bool, "isUsable", bool))
 
+
 <!--macro set up here:-->
 <!--renders a fat IT guy-->
 (set: $theItGuy to (macro: str-type _bubbleText, str-type _id, [
@@ -14,7 +15,10 @@
         (hook: _id)[\
             <div class="bubble bubble-bottom-left" contenteditable>_bubbleText</div>
             <img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />\
-        ]
+        ]\
+        (click-replace: (hooks-named:_id))[(unless: _id is "aua")[\
+            ($theItGuy: "aua", "aua")\
+        ]]\
     ]
 ]))
 
@@ -50,11 +54,14 @@
 ]))
 
 <!--define inventory items here, it is not a must, but could be handy in some cases.-->
-
-(set: $invNoteCaeserCipher to (dm: "displayText", "An important note", "name", "noteImportant", "description", "...", "isExternalLink", false, "isUsable", false))\
-
+{
+    (set: $invNoteCaeserCipher to (dm: "displayText", "An important note", "name", "noteImportant", "description", "...", "isExternalLink", false, "isUsable", false))
+    (set: $cd to (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", true))
+}
+<!--DEBUG ONLY-->
+(set: $inventory to it + (a: $cd))
 <!--only debug! set preffered passage here:-->
-(goto: "office")
+(goto: "lab")
 
 (live: 50ms)[
     <!--Put all set up user questions here:-->
