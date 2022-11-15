@@ -1,3 +1,13 @@
+:: UserScript [script]
+/* import jQuery UI library. */
+$(function () {
+  $.getScript("https://unpkg.com/jquery.terminal@2.34.0/js/jquery.terminal.min.js",
+    function (data, textStatus, jqxhr) {
+      console.log('External jquery.terminal.min.js loaded');
+    }
+  );
+});
+
 :: pc {"position":"400,0"}
 ==>
 [[inventory->inventory]]
@@ -18,5 +28,30 @@ You are sitting in front of a really old looking PC, it smells slithly, but you 
 ==>
 [<div class="bubble bubble-bottom-left" contenteditable>Yo dude I don't remember exactly where I left it, but you need a USB stick.</div>
 <img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]]<dude|
+
+
+
+(set: _testVariable to 0)
+
+<div class="terminal-container"></div>
+<script>
+$('.terminal-container').terminal({
+    iam: function (user) {
+        this.echo('Hello ' + user);
+    },
+    help: function () {
+        this.echo('Here is a list of available commands: ...')
+        State.variables.foo = 'bar';
+    },
+    test: function () {
+        this.echo('Trying to access story variables with JS ...')
+        this.echo("usedItem = " + testVariable);
+        this.echo('Trying to set story variables with JS ...')
+        testVariable = testVariable + 1;
+    }        
+ }, {
+        greetings: 'Hello User, type help to get a list of available commands! '
+});
+</script>
 
 [[lab->lab]]
