@@ -50,9 +50,9 @@ $('.terminal-container').terminal({
     },
     test: function () {
         this.echo('Trying to access story variables with JS ...')
-        this.echo("usedItem = " + testVariable);
+        this.echo("usedItem = " + _testVariable);
         this.echo('Trying to set story variables with JS ...')
-        testVariable = testVariable + 1;
+        _testVariable = 1;
     }        
  }, {
         greetings: 'Hello User, type help to get a list of available commands! '
