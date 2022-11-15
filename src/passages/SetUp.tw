@@ -57,6 +57,10 @@
 {
     (set: $invNoteCaeserCipher to (dm: "displayText", "An important note", "name", "noteImportant", "description", "...", "isExternalLink", false, "isUsable", false))
     (set: $cd to (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", true))
+    (set: $invCeaserCipherBook to (dm: "displayText", "Caeser-Chiffre: A simpler guide to the simplest encryption ever", "name", "invCeaserCipherBook", "description", "https://brilliant.org/wiki/caesar-cipher/", "isExternalLink", true, "isUsable", false))
+    (set: $invDHBook to (dm: "displayText", "Diffie-Hellmann for Dummies", "name", "invDHBook", "description", "https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange", "isExternalLink", true, "isUsable", false))
+    (set: $invHashBook to (dm: "displayText", "How to hash important stuff like passwords", "name", "invHashBook", "description", "https://en.wikipedia.org/wiki/Hash_function", "isExternalLink", true, "isUsable", false))
+    (set: $invRSABook to (dm: "displayText", "RSA: have fun", "name", "invRSABook", "description", "https://en.wikipedia.org/wiki/RSA_(cryptosystem)", "isExternalLink", true, "isUsable", false))
 }
 <!--DEBUG ONLY-->
 (set: $inventory to it + (a: $cd))

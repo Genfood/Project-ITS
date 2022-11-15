@@ -2,18 +2,24 @@
 ==>
 [[inventory->inventory]]
 <==
-#Dingy office of your predecessor
+###Dingy office of your predecessor
 The smell of your predecessor is still in the air...
+The room is cold and totally empty beside of:
 
 ||==
-|desk>[<img class="floating" src="../src/images/desk.jpeg"/>]
+(css: "font-size: 70%;")[a chaotic desk]
+|desk>[<img class="floating" src="../src/images/desk2.jpeg"/>]
 |noteImp>[{(click-replace:?noteImp) [(set: $inventory to it + (a: $invNoteCaeserCipher))]
     <img id="note-imp" src="../src/images/note_important.png">
     (if: ($doesInvContain: "noteImportant")) [
         (hide: ?noteImp)
     ]}]
 =|
+(css: "font-size: 50%;")[a mysterious office container]
 [[<img class="floating" src="../src/images/office-container.png"/>->officeContainer]]
+=|
+(css: "font-size: 70%;")[a dusty bookshelf]
+[[<img class="floating" src="../src/images/bookshelf.png"/>->bookshelf]]
 |==|
 
 <style>
