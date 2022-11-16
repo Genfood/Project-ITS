@@ -3,10 +3,22 @@
 [[inventory->inventory]]
 <==
 #a fucking old and slow pc
-{<img src="../src/images/pc.png"/>
-|terminal>[<div class="terminal-container"></div>]
-|powerButton>[<div id="power"></dic>]
-(click:?powerButton)[(hide: ?terminal)]
+{
+    <img src="../src/images/pc.png"/>
+    |terminal>[<div class="terminal-container"></div>]
+    |powerButton>[<div id="power"></dic>]
+    (set: _isTerminalHidden to false)
+    (click-rerun:?powerButton)
+    [
+        (if: _isTerminalHidden) [
+            (show: ?terminal)
+            (set: _isTerminalHidden to false)
+        ] (else:) [
+            (hide: ?terminal)
+            (set: _isTerminalHidden to true)
+        ]
+            
+    ]
 }
 {
 (set: _insertedItem to $usedItem)
