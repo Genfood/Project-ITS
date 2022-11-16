@@ -1,0 +1,9 @@
+:: Story JavaScript [script] {"position":"475,525"}
+
+$(function () {
+  $.getScript("https://unpkg.com/jquery.terminal@2.34.0/js/jquery.terminal.min.js",
+    function (data, textStatus, jqxhr) {
+      console.log('External jquery.terminal.min.js loaded');
+    }
+  );
+});

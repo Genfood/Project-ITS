@@ -1,12 +1,3 @@
-:: UserScript [script]
-$(function () {
-  $.getScript("https://unpkg.com/jquery.terminal@2.34.0/js/jquery.terminal.min.js",
-    function (data, textStatus, jqxhr) {
-      console.log('External jquery.terminal.min.js loaded');
-    }
-  );
-});
-
 :: pc {"position":"400,0"}
 ==>
 [[inventory->inventory]]
