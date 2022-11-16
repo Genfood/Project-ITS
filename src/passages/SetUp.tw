@@ -65,6 +65,7 @@
 }
 <!--DEBUG ONLY-->
 (set: $inventory to it + (a: $cd))
+(set: $name to "Flo")
 <!--only debug! set preffered passage here:-->
 (goto: "lab")
 
