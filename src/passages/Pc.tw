@@ -3,11 +3,17 @@
 [[inventory->inventory]]
 <==
 #a fucking old and slow pc
+{<img src="../src/images/pc.png"/>
+|terminal>[<div class="terminal-container"></div>]
+|powerButton>[<div id="power"></dic>]
+(click:?powerButton)[(hide: ?terminal)]
+}
+{
 (set: _insertedItem to $usedItem)
 (set: _cdContent to (a: (dm: "name", "RSA file.key", "content", "..."), (dm: "name", "OTP file.data", "content", "..."),(dm: "name", "file", "content", "...")))
 (set: _path to "~/")
 You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.
-
+}
 <!-- |cdContent)[(for: each _item, ..._cdContent)[-rw-------    1 Thomas  staff      25 18 Okt 22:01 _item<br>]]
 $name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></div> -->
 <!--The variable '$usedItem' contains the item the user clicked on. Set it always to  0, if you dont use it, to avoid missunderstandings in other passages. -->
@@ -32,8 +38,6 @@ $name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></
 
 
 (set: _testVariable to 0)
-<img src="../src/images/pc.png"/>
-<div class="terminal-container"></div>
 }
 <script>
 var term = $('.terminal-container').terminal({
@@ -88,7 +92,7 @@ var term = $('.terminal-container').terminal({
         });
     }
 }, {
-    greetings: 'Hello User, type help to get a list of available commands! ',
+    greetings: 'Hello ' + $name + ', type help to get a list of available commands! ',
     prompt() {
         return `┌──(${color('green', $name + "@oldPC")})-[${color('blue', _path)}]
 └─\$ `;
@@ -114,11 +118,21 @@ function color(name, string) {
 </script>
 <style>
 .terminal-container {
-    height: 280pt;
+    height: 271pt;
     overflow-y: scroll;
-    max-width: 370pt;
+    width: 364pt;
     top: -470pt;
-    left: 190pt;
+    left: 192pt;
+    border-radius: 11pt;
+    position: absolute;
+}
+
+#power {
+    height: 30pt;
+    width: 30pt;
+    position: absolute;
+    top: -135pt;
+    left: 499pt;
 }
 </style>
 

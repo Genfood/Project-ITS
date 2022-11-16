@@ -1,4 +1,4 @@
-:: Story Stylesheet [stylesheet] {"position":"475,525"}
+:: Story Stylesheet [stylesheet] {"position":"200,525"}
 tw-icon[title="Undo"], tw-icon[title="Redo"] {
     display: none;
 }
