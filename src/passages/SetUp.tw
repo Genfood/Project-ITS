@@ -26,10 +26,14 @@
 (set: $inventoryItem to (macro: $inventoryItemType-type _item, [
     (set: _display to _item's displayText)\
     (set: _id to _item's name)\
-    (output:)[\
-    (hook: _id)[_display]\
-        (click-replace: (hooks-named:_id))[(set: $inventory to it + (a:_item))]\
-    ]
+    (output:)[{
+    (hook: _id)[_display]
+        (unless: _item is in $inventory) [
+            (click-replace: (hooks-named:_id))[(set: $inventory to it + (a:_item))]
+        ] (else:) [
+            (hide: (hooks-named:_id))
+        ]
+    }]
 ]))
 <!--Prints all inventory items in the given array-->
 (set: $inventoryItems to (macro: array-type _items, [
