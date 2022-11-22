@@ -21,16 +21,16 @@ $officeContainerIsUnlocked[\
 (set: _note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false))\
 |drawer1>[\
 * ($inventoryItem: _book1)
-* ($inventoryItem: _book2)
-(link-rerun: "untere Schublade öffnen")[(show: ?drawer2)(hide: ?drawer1)]\
+* ($inventoryItem: $invSmartphone)
+(link-rerun: "open lower drawer")[(show: ?drawer2)(hide: ?drawer1)]\
 ]\
 |drawer2)[\
-* ($inventoryItem: _note1)
+* ($inventoryItem: $invUSB)
 * ($inventoryItem: _note2)
 * ($inventoryItem: _note3)
 * ($inventoryItem: _note4)
 * ($inventoryItem: $cd)
-(link-rerun: "obere Schublade öffnen")[(show: ?drawer1)(hide: ?drawer2)]\
+(link-rerun: "open upper drawer")[(show: ?drawer1)(hide: ?drawer2)]\
 ]
 
 
