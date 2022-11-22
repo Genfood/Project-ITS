@@ -21,8 +21,13 @@
     ]
 }
 {
-(set: _insertedItem to $usedItem)
-(set: _cdContent to (a: (dm: "name", "RSA file.key", "content", "..."), (dm: "name", "OTP file.data", "content", "..."),(dm: "name", "file", "content", "...")))
+(set: $insertedItem to $usedItem)
+(set: $cdContent to (a:
+    (dm: "name", "RSA_file.key", "content", "d=7085071307; n=7085811221"),
+    (dm: "name", "RSA_file.enc", "content", "51191029 2221684278 1235109347 5932720573 5722816980 407222931 1597934719 6297126078 7002519417"),
+    (dm: "name", "RSA_file.info", "content", "RSA file.enc contains and array with multiple RSA encrypted characters."),
+    (dm: "name", "OTP_file.data", "content", "..."),
+    (dm: "name", "file", "content", "...")))
 (set: _path to "~/")
 You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.
 }
@@ -49,7 +54,7 @@ $name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></
 <img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]](dude|
 
 
-(set: _testVariable to 0)
+(set: $testVariable to 12)
 }
 <script>
 var term = $('.terminal-container').terminal({
@@ -59,67 +64,55 @@ var term = $('.terminal-container').terminal({
     help: function () {
         this.echo('Here is a list of available commands: ...')
     },
-    test: function () {
-        this.echo('Trying to access story variables with JS ...')
-        this.echo("usedItem = " + _testVariable);
-        this.echo('Trying to set story variables with JS ...')
-        _testVariable = 1;
-    },
-    cat: function(file) {
-        //console.log(_insertedItem.get("name"));
-        //console.log(_insertedItem);
-        console.log(_cdContent);
+    test: test({val:$testVariable}),
+    test2: test2({val:$testVariable}),
+    cat: cat(),
+    ls: ls($insertedItem, $cdContent),
+    verify: verify(),
+    //decrypt: decrypt(),
+    openssl: function (command, ...args) {
+        //var args = Array.from(arguments);
+        var options = $.terminal.parse_options(args);
 
-        var item = (_insertedItem == 0) ? "":_insertedItem.get("name");
-        switch(item) {
-            case "CD":
-                this.echo(_cdContent.find(x => x.get("name") == file).get("content"));
-                break;
+        console.log(options);
+        console.log(command);
+        if (command == "rsautl") {
+            if (!options.decrypt || !options.encrypt) {
+                this.error("Specify decrypt or encrypt.");
+            } else if (options.inkey || options.in) {
+                this.error("no keyfile specified\nunable to load Private Key");
+            }
+
+            const p = 191n;
+            const q = 223n;
+            const n = p * q;
+            const phi = (p - 1n) * (q - 1n);
+            const e = 47n;
+
             
-            default:
-                this.echo()
-                break;
         }
-    },
-    ls: function() {
-        var item = (_insertedItem == 0) ? "":_insertedItem.get("name");
-        switch (item) {
-            case "CD":
-                _cdContent.forEach(element => {
-                    this.echo(element.get("name"));
-                });
-                break;
 
-            case "USB":
-                break;
-        
-            default:
-                this.echo("The directory is empty. 🥲");
-                break;
-        }
-    },
-    decrypt: function(file) {
-        this.read("Enter key: ", key => {
-            this.echo(key);
-        });
+
     }
 }, {
     greetings: 'Hello ' + $name + ', type help to get a list of available commands! ',
     prompt() {
         return `┌──(${color('green', $name + "@oldPC")})-[${color('blue', _path)}]
 └─\$ `;
-    }
+    },
+    checkArity: false
 });
+
 
 function color(name, string) {
     var colors = {
-        blue:   '#55f',
-        green:  '#4d4',
-        grey:   '#999',
-        red:    '#A00',
+        blue: '#55f',
+        green: '#4d4',
+        grey: '#999',
+        red: '#A00',
         yellow: '#FF5',
         violet: '#a320ce',
-        white:  '#fff'
+        white: '#fff'
     }
     if (colors[name]) {
         return '[[;' + colors[name] + ';]' + string + ']';
