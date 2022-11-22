@@ -1,4 +1,4 @@
-:: lab {"position":"200,0"}
+:: lab [lab] {"position":"200,0"}
 ==>
 [[inventory->inventory]]
 <==

@@ -1,6 +1,12 @@
-:: prologue {"position":"0,0"}
+:: prologue [prologue] {"position":"0,0"}
 ## Encrypt our Alien stuff!
 ##### Prologue
+
+
+
+
+
+
 
 Hey $name, you are newly employed working in a super secret lab operated by the U.S. goverment. your are the successor of John. John left the organisation due to his incompetence. Your department is taking care of reverse engineering (text-style:"underline")[Alien technology]. 
 
@@ -9,7 +15,6 @@ Because of leaked UFO footage, your boss is going nuts and wants you to encrypt 
 John has been the only person in the secret lab that had a clue concerning IT stuff, so maybe he left something that could help you. 
 You could start with checking out either John´s office or the old computer lab John regularly visited.
 
-($theItGuy:"By the way: I´m your imagination of John, I will help you in case your stuck. No worries!", "guy1")
+($theItGuy:"By the way: I´m your imagination of John, I will help you in case your stuck. No worries!", "guyPrologue")
 [[go to office->office]]
 [[go to computer lab->lab]]
-

@@ -1,4 +1,4 @@
-:: officeContainer {"position":"0,400"}
+:: officeContainer [officeContainer] {"position":"0,400"}
 (unless: $officeContainerIsUnlocked)[\
     (set: _code to (prompt: "Enter code to unlock container:", ""))\
     (if:_code is "helloworld")[(set: $officeContainerIsUnlocked to true)]\
@@ -8,7 +8,7 @@
 [[inventory->inventory]]
 <==
 $officeContainerIsUnlocked[\
-    #Test]\
+    ###Office container]\
 \
 \
 \
@@ -34,6 +34,6 @@ $officeContainerIsUnlocked[\
 ]
 
 
-($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC.", "guy1")(hide: ?guy1)\
-($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC.", "guy2")
+(if: visits > 3)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy1")(hide: ?guy1)]\
+(if: visits > 3)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy2")]
 [[back to the office->office]]

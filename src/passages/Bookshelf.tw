@@ -1,4 +1,4 @@
-:: bookshelf {"position":"200,275"}
+:: bookshelf [bookshelf] {"position":"200,275"}
 ==>
 [[inventory->inventory]]
 <==
