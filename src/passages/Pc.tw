@@ -148,7 +148,7 @@ function color(name, string) {
 }
 </style>
 
-[[lab->lab]]
+[[back to the lab->lab]]
 
 <!--
 (set: $toggleOnKeyDown to 0)

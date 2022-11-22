@@ -2,12 +2,12 @@
 ==>
 [[inventory->inventory]]
 <==
-###Dingy office of your predecessor
+###Old office of your predecessor
 The smell of your predecessor is still in the air...
 The room is cold and totally empty beside of:
 
 ||==
-(css: "font-size: 70%;")[a chaotic desk]
+(css: "font-size: 100%;")[a chaotic desk]
 |desk>[<img class="floating" src="../src/images/desk3.jpg"/>]
 |noteImp>[{(click-replace:?noteImp) [(set: $inventory to it + (a: $invNoteCaeserCipher))]
     <img id="note-imp" src="../src/images/note_important.png">
@@ -36,10 +36,10 @@ The room is cold and totally empty beside of:
     ]}]
 |==|
  <!-- =| -->
-(css: "font-size: 70%;")[a mysterious office container (unless: $officeContainerIsUnlocked)[, that seems to be locked]]
+(css: "font-size: 100%;")[a mysterious office container (unless: $officeContainerIsUnlocked)[, that seems to be locked]]
 [[<img class="floating" src="../src/images/office-container.png"/>->officeContainer]]
  <!-- =| -->
-(css: "font-size: 70%;")[a dusty bookshelf]
+(css: "font-size: 100%;")[a dusty bookshelf]
 [[<img class="floating" src="../src/images/bookshelf.png"/>->bookshelf]]
  <!-- |==| -->
 
@@ -86,8 +86,4 @@ The room is cold and totally empty beside of:
 }
 </style>
 
-[[lab->lab]]
-[[bookshelf->bookshelf]]
-[[desk->desk]]
-[[officeContainer->officeContainer]]
-
+[[change rooms and go to lab->lab]]

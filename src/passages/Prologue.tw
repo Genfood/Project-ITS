@@ -1,14 +1,15 @@
 :: prologue {"position":"0,0"}
-
-(set: $name to (prompt: "Please enter your character name :)", ""))
 ## Encrypt our Alien stuff!
 ##### Prologue
 
-Hey $name, you are newly employed working in a super secret lab operated by the U.S. goverment. your are the successor of John. John left the company due to his incompetence. Your department is taking care of reverse engineering (text-style:"underline")[Alien technology] . Because of leaked UFO footage , your boss is going nuts and wants you to encrypt all data using suitable methods to prevent further leakages to the public. Until now, all of the lab´s highly sensitive data has been stored unencrypted and your department is not allowed to hire an external encryption expert because of the top secret classification. Your tasks is to teach yourself in encryption and choose suitable methods to protect your departments data against the public. 
+Hey $name, you are newly employed working in a super secret lab operated by the U.S. goverment. your are the successor of John. John left the organisation due to his incompetence. Your department is taking care of reverse engineering (text-style:"underline")[Alien technology]. 
 
-You could start with checking out wether John´s office or the old computer lab John regularly visited.
+Because of leaked UFO footage, your boss is going nuts and wants you to encrypt all data using suitable methods to prevent further leakages to the public. Until now, all of the organisation´s highly sensitive data has been stored unencrypted and your department is not allowed to hire an external encryption expert because of the top secret classification. Your tasks is to teach yourself in encryption and choose suitable methods to protect your department´s data against the public. 
 
+John has been the only person in the secret lab that had a clue concerning IT stuff, so maybe he left something that could help you. 
+You could start with checking out either John´s office or the old computer lab John regularly visited.
 
-[[office->office]]
-[[lab->lab]]
+($theItGuy:"By the way: I´m your imagination of John, I will help you in case your stuck. No worries!", "guy1")
+[[go to office->office]]
+[[go to computer lab->lab]]
 

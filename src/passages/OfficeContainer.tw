@@ -34,6 +34,6 @@ $officeContainerIsUnlocked[\
 ]
 
 
-($theItGuy:"Junge was machst du hier verpiss dich von meinem Bier!!!!!", "guy1")(hide: ?guy1)\
-($theItGuy:"Junge was machst du hier verpiss dich von meinem Bier!!!!!", "guy2")
-[[fuck this shit, what's else in the office->office]]
+($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC.", "guy1")(hide: ?guy1)\
+($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC.", "guy2")
+[[back to the office->office]]
