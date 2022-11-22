@@ -1,8 +1,14 @@
-:: lab {"position":"200,0"}
-
-[[office->office]]
-[[pc->pc]]
+:: lab [lab] {"position":"200,0"}
+==>
 [[inventory->inventory]]
+<==
+###Old computer lab
+
+Oh wow, that´s not a lab... that´s just a depressing room with one PC in it. 
+No wonder John quit...
+
+[[change rooms and go to office->office]]
+[[take a closer look at the pc->pc]]
 [[prologue->prologue]]
 <script>
 window.onkeydown = null;
