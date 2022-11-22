@@ -66,6 +66,10 @@
     (set: $invHashBook to (dm: "displayText", "How to hash important stuff like passwords", "name", "invHashBook", "description", "https://en.wikipedia.org/wiki/Hash_function", "isExternalLink", true, "isUsable", false))
     (set: $invRSABook to (dm: "displayText", "RSA: have fun", "name", "invRSABook", "description", "https://en.wikipedia.org/wiki/RSA_(cryptosystem)", "isExternalLink", true, "isUsable", false))
     (set: $invMug to (dm: "displayText", "A useless coffee mug", "name", "invMug", "description", "a coffee mug with a slogan: If you call me nerd, I will call you an ambulance", "isExternalLink", false, "isUsable", false))
+    (set: $invPlayboy to (dm: "displayText", "Playboy issue #7 of 1986", "name", "invPlayboy", "description", "Guess, that won´t help you for now... ;)", "isExternalLink", false, "isUsable", false))
+    (set: $invRifles to (dm: "displayText", "A magazine for rifles", "name", "invRifles","description", "What a bullsh*t!", "isExternalLink", false, "isUsable", false))
+    (set: $invNature to (dm: "displayText", "A Nature Lifestlye magazin called 'Fish and Flesh'", "name", "invNature","description", "I doubt that John ever set foot in nature.", "isExternalLink", false, "isUsable", false))
+    (set: $invEdgar to (dm: "displayText", "The Gold Bug by Edgar Allan Poe ", "name", "invEdgar", "description", "Didn´t know that John was interested in that kind of literature...", "isExternalLink", false, "isUsable", false))
 }
 <!--DEBUG ONLY-->
 (set: $inventory to it + (a: $cd))

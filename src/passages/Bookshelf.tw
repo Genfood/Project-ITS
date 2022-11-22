@@ -7,13 +7,13 @@ The bookshelf is this boring IKEA thing everbody has in their apartment. It´s f
 A few of them jump into your eye:
 
 * ($inventoryItem: $invCeaserCipherBook)
-* Playboy issue #7 of 1986
+* ($inventoryItem: $invPlayboy)
 * ($inventoryItem: $invDHBook)
 * ($inventoryItem: $invRSABook)
-* A magazine for rifles
+* ($inventoryItem: $invRifles)
 * ($inventoryItem: $invHashBook)
-* A Nature Lifestlye magazin called "Fish and Flesh"
-* The Gold Bug by Edgar Allan Poe 
+* ($inventoryItem: $invNature)
+* ($inventoryItem: $invEdgar)
 
 Some of them seem more interesting to you than others...
 but remember your mission: You need to learn about Cryptography!
