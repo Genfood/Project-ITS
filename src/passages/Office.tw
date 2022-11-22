@@ -8,19 +8,40 @@ The room is cold and totally empty beside of:
 
 ||==
 (css: "font-size: 70%;")[a chaotic desk]
-|desk>[<img class="floating" src="../src/images/desk2.jpeg"/>]
+|desk>[<img class="floating" src="../src/images/desk3.jpg"/>]
 |noteImp>[{(click-replace:?noteImp) [(set: $inventory to it + (a: $invNoteCaeserCipher))]
     <img id="note-imp" src="../src/images/note_important.png">
     (if: ($doesInvContain: "noteImportant")) [
         (hide: ?noteImp)
     ]}]
-=|
-(css: "font-size: 50%;")[a mysterious office container]
+|paper>[{(click-replace:?paper) [(set: $inventory to it + (a: $invPaper))]
+    <img id="paper" src="../src/images/Papier.png">
+    (if: ($doesInvContain: "invPaper")) [
+        (hide: ?paper)
+    ]}]
+|pens>[{(click-replace:?pens) [(set: $inventory to it + (a: $invPens))]
+    <img id="pens" src="../src/images/Pens.png">
+    (if: ($doesInvContain: "invPens")) [
+        (hide: ?pens)
+    ]}]
+|paperclips>[{(click-replace:?paperclips) [(set: $inventory to it + (a: $invPaperclips))]
+    <img id="paperclips" src="../src/images/paperclips.png">
+    (if: ($doesInvContain: "invPaperclips")) [
+        (hide: ?paperclips)
+    ]}]
+|scissors>[{(click-replace:?scissors) [(set: $inventory to it + (a: $invScissors))]
+    <img id="scissors" src="../src/images/Scissors.png">
+    (if: ($doesInvContain: "invScissors")) [
+        (hide: ?scissors)
+    ]}]
+|==|
+ <!-- =| -->
+(css: "font-size: 70%;")[a mysterious office container (unless: $officeContainerIsUnlocked)[, that seems to be locked]]
 [[<img class="floating" src="../src/images/office-container.png"/>->officeContainer]]
-=|
+ <!-- =| -->
 (css: "font-size: 70%;")[a dusty bookshelf]
 [[<img class="floating" src="../src/images/bookshelf.png"/>->bookshelf]]
-|==|
+ <!-- |==| -->
 
 <style>
 .floating {
@@ -28,13 +49,43 @@ The room is cold and totally empty beside of:
     max-height:100%;
 }
 
+
 #note-imp {
     top: -40%;
     left: 12%;
     max-width: 10%;
     max-height: 10%;
 }
+
+#paper {
+    top: -30%;
+    left: 12%;
+    max-width: 20%;
+    max-height: 20%;
+}
+
+#pens {
+    top: -60%;
+    left: 70%;
+    max-width: 25%;
+    max-height: 25%;
+}
+
+#paperclips {
+    top: -60%;
+    left: 70%;
+    max-width: 15%;
+    max-height: 15%;
+}
+
+#scissors {
+    top: -80%;
+    left: 70%;
+    max-width: 30%;
+    max-height: 30%;
+}
 </style>
+
 [[lab->lab]]
 [[bookshelf->bookshelf]]
 [[desk->desk]]

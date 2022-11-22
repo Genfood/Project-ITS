@@ -1,14 +1,7 @@
 :: desk {"position":"400,200"}
 ## Wow, that desk is messy
 
-You scan the desk and the longer you look the more garbage you find on it:
-- a coffee mug with a "cool" slogan: "If you call me nerd, I will call you an ambulance"
-- handwritten notes, which look confusing
-- a 10:1 figure of Gollum, which is kinda creepy
-- broken pencils
-
-You decide to collect the notes, as you hope that they might be useful in the future.
-
+Passage might be deleted as items are collected via clicking on images
 
 
 [[office->office]]
