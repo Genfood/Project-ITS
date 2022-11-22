@@ -1,7 +1,7 @@
 :: officeContainer {"position":"0,400"}
 (unless: $officeContainerIsUnlocked)[\
-    (set: _code to (prompt: "Enter the code:", ""))\
-    (if:_code is "")[(set: $officeContainerIsUnlocked to true)]\
+    (set: _code to (prompt: "Enter code to unluck container:", ""))\
+    (if:_code is "helloworld")[(set: $officeContainerIsUnlocked to true)]\
     (else:)[(goto: "office")]\
 ]\
 ==>

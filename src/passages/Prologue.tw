@@ -5,8 +5,9 @@
 Hey $name, you are newly employed working in a super secret lab operated by the U.S. goverment. your are the successor of John. John left the company due to his incompetence. Your department is taking care of reverse engineering (text-style:"underline")[Alien technology] . Because of leaked UFO footage , your boss is going nuts and wants you to encrypt all data using suitable methods to prevent further leakages to the public. Until now, all of the lab´s highly sensitive data has been stored unencrypted and your department is not allowed to hire an external encryption expert because of the top secret classification. Your tasks is to teach yourself in encryption and choose suitable methods to protect your departments data against the public. 
 
 
-Good luck!
 
-You can start with checking out wether John´s office or the old computer lab John regularly visited.
+You could start with checking out wether John´s office or the old computer lab John regularly visited.
+
+
 [[office->office]]
 [[lab->lab]]
