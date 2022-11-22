@@ -3,6 +3,7 @@
 [[office->office]]
 [[pc->pc]]
 [[inventory->inventory]]
+[[prologue->prologue]]
 <script>
 window.onkeydown = null;
 </script>
