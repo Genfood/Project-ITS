@@ -125,8 +125,6 @@ var term = $('.terminal-container').terminal({
     
 
     },
-    test: test({val:$testVariable}),
-    test2: test2({val:$testVariable}),
     cat: cat(),
     ls: ls(),
     mount: mount(),
