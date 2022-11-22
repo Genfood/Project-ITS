@@ -53,11 +53,13 @@ function verify() {
 
 }
 
-function ls(insertedItem, cdContent) {
+function ls() {
     return function () {
+        var insertedItem = window.getHarloweVariable("$insertedItem");
         var item = (insertedItem == 0) ? "" : insertedItem.get("name");
         switch (item) {
             case "CD":
+                var cdContent = window.getHarloweVariable("$cdContent");
                 cdContent.forEach(element => {
                     this.echo(element.get("name"));
                 });
@@ -100,6 +102,35 @@ function cat() {
                 break;
         }
     }
+}
+
+function mount() {
+    return function (volume) {
+        const inventory = window.getHarloweVariable("$inventory");
+        console.log(inventory);
+        var searchFor = "";
+        if (volume == "cd" || volume == "CD") {
+            searchFor = "CD";
+        } else if(volume == "usb" || volume == "USB") {
+            searchFor = "USB";
+        } else {
+            this.error("no such volume '" + volume + "' found");
+            return;
+        }
+
+        for (let i = 0; i < inventory.length; i++) {
+            const item = inventory[i];
+            console.log(item);
+            const itemName = item.get("name");
+            if (itemName == searchFor) {
+
+                window.setHarloweVariable("$insertedItem", item);
+                window.setHarloweVariable("$path", "~/" + itemName);
+                return;
+            }
+        }
+        this.error("no such volume '" + volume + "' found");
+    };
 }
 
 function decrypt() {

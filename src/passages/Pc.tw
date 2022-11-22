@@ -28,14 +28,14 @@
     (dm: "name", "RSA_file.info", "content", "RSA file.enc contains and array with multiple RSA encrypted characters."),
     (dm: "name", "OTP_file.data", "content", "..."),
     (dm: "name", "file", "content", "...")))
-(set: _path to "~/")
+(set: $path to "~/")
 You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.
 }
 <!-- |cdContent)[(for: each _item, ..._cdContent)[-rw-------    1 Thomas  staff      25 18 Okt 22:01 _item<br>]]
 $name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></div> -->
 <!--The variable '$usedItem' contains the item the user clicked on. Set it always to  0, if you dont use it, to avoid missunderstandings in other passages. -->
 {(unless: $usedItem is 0)[\
-(set: _path to "~/"+$usedItem's name)
+(set: $path to "~/"+$usedItem's name)
 \(if: $usedItem's name is  is "USB Stick") [\
 \You fiddle around with the USB stick on the PC case. After you have turned the stick three times, it finally fits in.
 \]
@@ -125,12 +125,11 @@ var term = $('.terminal-container').terminal({
     
 
     },
-    cat: function(file) {
-        console.log(_cdContent);
     test: test({val:$testVariable}),
     test2: test2({val:$testVariable}),
     cat: cat(),
-    ls: ls($insertedItem, $cdContent),
+    ls: ls(),
+    mount: mount(),
     verify: verify(),
     //decrypt: decrypt(),
     openssl: function (command, ...args) {
@@ -160,7 +159,7 @@ var term = $('.terminal-container').terminal({
 }, {
     greetings: 'Hello ' + $name + ', type help to get a list of available commands! ',
     prompt() {
-        return `┌──(${color('green', $name + "@oldPC")})-[${color('blue', _path)}]
+        return `┌──(${color('green', $name + "@oldPC")})-[${color('blue', $path)}]
 └─\$ `;
     },
     checkArity: false
