@@ -206,7 +206,7 @@ math {
 }
 </style>
 
-[[back to the lab->lab]]
+(button: "XX==")[[[back to the lab->lab]]]
 
 <!--
 (set: $toggleOnKeyDown to 0)
