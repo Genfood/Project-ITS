@@ -46,9 +46,10 @@ tw-story[tags ~= "prologue"] {
 } 
 
 tw-story[tags ~= "office"] {
-  background-image: url(../src/images/wall.jpg);
+  background-image: url(../src/images/office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 100%:
 } 
 
 tw-story[tags ~= "lab"] {
