@@ -207,11 +207,14 @@ function connect () {
         let c = this;
         this.read('Please tell me, a=').then(async function(string) {
             console.log(string);
-            await c.echo('We\'re half way there, but I need you to do one last calculation.', {typing: true, delay: 100 });
+            await c.echo('Thanks! We\'re half way there, but I need you to do one last calculation.', {typing: true, delay: 100 });
             c.echo("<math><mrow><mi>k</mi> <mo>=</mo> <msup><mi>b</mi><mi>u</mi></msup> <mo>mod</mo> <mi>p</mi></mrow></math>", {raw: true});
             c.echo("<math> <mo>&#x21d2;</mo> <mrow><mi>k</mi> <mo>=</mo> <msup><mi>"+b+"</mi><mi>u</mi></msup> <mo>mod</mo> <mi>"+p+"</mi></mrow> </math>", {raw: true});
             await c.echo('Remember that u is your secret number', {typing: true, delay: 100 });
             await c.echo('I was also able to calculate the value of k with my the number you told me. This will be our shared secret from now on!', {typing: true, delay: 100 });
+            
+            var k = Math.pow(string, v) % p;
+            window.setHarloweVariable("$dhSharedSecret", k);
         });
     }
 }

@@ -54,7 +54,7 @@ $name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></
 <img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]](dude|
 
 
-(set: $testVariable to 12)
+(set: $dhSharedSecret to 0)
 }
 <script>
 
