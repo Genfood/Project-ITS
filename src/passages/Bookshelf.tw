@@ -1,6 +1,6 @@
 :: bookshelf [bookshelf] {"position":"200,275"}
 ==>
-[[inventory->inventory]]
+(button: "==X")[[inventory->inventory]]
 <==
 ## You are standing in front of the bookshelf
 The bookshelf is this boring IKEA thing everbody has in their apartment. It´s filled with a bunch of books and magazines.
@@ -18,4 +18,4 @@ A few of them jump into your eye:
 Some of them seem more interesting to you than others...
 but remember your mission: You need to learn about Cryptography!
 
-[[back to office->office]]
+(button: "XX==")[[back to office->office]]

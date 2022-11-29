@@ -1,6 +1,6 @@
 :: pc {"position":"400,0"}
 ==>
-[[inventory->inventory]]
+(button: "==X")[[inventory->inventory]]
 <==
 #a fucking old and slow pc
 {
@@ -151,7 +151,7 @@ math {
 }
 </style>
 
-[[back to the lab->lab]]
+(button: "XX==")[[[back to the lab->lab]]]
 
 <!--
 (set: $toggleOnKeyDown to 0)

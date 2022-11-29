@@ -5,7 +5,7 @@
     (else:)[(goto: "office")]\
 ]\
 ==>
-[[inventory->inventory]]
+(button: "==X")[[inventory->inventory]]
 <==
 $officeContainerIsUnlocked[\
     ###Office container]\
@@ -36,4 +36,4 @@ $officeContainerIsUnlocked[\
 
 (if: visits > 3)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy1")(hide: ?guy1)]\
 (if: visits > 3)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy2")]
-[[back to the office->office]]
+(button: "XX==")[[[back to the office->office]]]
