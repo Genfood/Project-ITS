@@ -1,5 +1,4 @@
 :: prologue [prologue] {"position":"0,0"}
-(enchant: ?prologue, (box:"XXX="))
 ## Encrypt our Alien stuff!
 #### Prologue
 
@@ -10,7 +9,7 @@ Because of leaked UFO footage, your boss is going nuts and wants you to encrypt 
 John has been the only person in the secret lab that had a clue concerning IT stuff, so maybe he left something that could help you. 
 You could start with checking out either John´s office or the old computer lab John regularly visited.]
 
-(box:"==XXX", 16)[($theItGuy:"By the way: I´m your imagination of John, I will help you in case your stuck. No worries!", "guyPrologue")]
+(box:"==XXX", 16)[(opacity: 0.75)[($theItGuy:"By the way: I´m your imagination of John, I will help you in case your stuck. No worries!", "guyPrologue")]]
 (button:)[[go to office->office]]
 (button:)[[go to computer lab->lab]]
 

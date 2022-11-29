@@ -51,3 +51,9 @@ tw-story[tags ~= "office"] {
   background-repeat: no-repeat;
 } 
 
+tw-story[tags ~= "lab"] {
+  background-image: url(../src/images/wall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+

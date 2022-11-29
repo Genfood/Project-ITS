@@ -1,6 +1,6 @@
 :: pc {"position":"400,0"}
 ==>
-[[inventory->inventory]]
+(button: "==X")[[inventory->inventory]]
 <==
 #a fucking old and slow pc
 {

@@ -5,7 +5,7 @@
     (else:)[(goto: "office")]\
 ]\
 ==>
-[[inventory->inventory]]
+(button: "==X")[[inventory->inventory]]
 <==
 $officeContainerIsUnlocked[\
     ###Office container]\
