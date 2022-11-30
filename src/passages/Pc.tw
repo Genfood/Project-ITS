@@ -26,8 +26,9 @@
     (dm: "name", "RSA_file.key", "content", "d=7085071307; n=7085811221"),
     (dm: "name", "RSA_file.enc", "content", "51191029 2221684278 1235109347 5932720573 5722816980 407222931 1597934719 6297126078 7002519417"),
     (dm: "name", "RSA_file.info", "content", "RSA file.enc contains and array with multiple RSA encrypted characters."),
+    (dm: "name", "OTP_file.key.encfromrsa", "content", "...", "isEnc", true, "key", "^rR!*#.8ß"),
     (dm: "name", "OTP_file.data", "content", "..."),
-    (dm: "name", "file", "content", "...")))
+    (dm: "name", "file", "content", "...","isEnc", true, "key", "^rR!*#.8ß")))
 (set: $path to "~/")
 You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.
 }
