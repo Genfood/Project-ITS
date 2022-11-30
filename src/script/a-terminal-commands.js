@@ -95,6 +95,8 @@ function cat() {
                             this.read("The file is encrypted, pls enter the password:").then(async function(inp) {
                                 if(f.get("key") == inp) {
                                     this.echo(f.get("content"));
+                                } else {
+                                    this.error("Wrong password has been entered. Try again.")
                                 }
                             });
                             return;
