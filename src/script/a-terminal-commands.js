@@ -164,3 +164,68 @@ function decrypt() {
 
     }
 }
+
+
+function sleep(milliseconds) {
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
+   
+async function loading(term, n, delay ) {
+    for (let i = 0; i < n; i++) {
+        term.echo(".", {newline: false});
+        await sleep(delay);
+    }
+}
+
+// DH-Keyexchange Game
+function connect () {
+    return async function() {
+        this.echo('Trying to connect to OLD-SERVER ...');
+        //await loading(this,25,200);
+        this.clear();
+        this.echo('CONNECTED\n');
+
+        // Shared prime
+
+        var p = 23;
+        // Shared generator
+        var g = 12;
+        
+        //Servers secret
+        var v = 8;
+        //Servers 
+        var b = Math.pow(g,v) % p;
+
+
+        await this.echo("Welcome, glad to have you back! Your last login is 242 days ago. Therefor we have to agree on a new shared secret. " +
+        "Don\'t worry though, I\'ll guide you through the process! But first we have to agree on a prime number P and a natural number G. "+
+        "I'll pick these for us. Trust me on this!", {typing: true, delay: 100, finalize: function(div) { } });
+
+
+        this.echo("\n\n")
+        await this.echo('I picked '+ p + ' as our prime number and ' + g + ' as our natural number. Don\'t forget these!', {typing: true, delay: 100 });
+        this.echo("\n\n")
+        await this.echo('Now, try to think about a number smaller than ' + p + ". Let's call it u! Keep this number to yourself and don't tell anyone!", {typing: true, delay: 100 });
+        await this.echo('I need you to find a pen and paper now and calculate the following term.', {typing: true, delay: 100 });
+
+        this.echo("<math><mrow><mi>a</mi> <mo>=</mo> <msup><mi>g</mi><mi>u</mi></msup> <mo>mod</mo> <mi>p</mi></mrow></math>", {raw: true});
+        this.echo("<math> <mo>&#x21d2;</mo> <mrow><mi>a</mi> <mo>=</mo> <msup><mi>"+g+"</mi><mi>u</mi></msup> <mo>mod</mo> <mi>"+p+"</mi></mrow> </math>", {raw: true});
+        await this.echo('Remember, p='+p+' and g='+g+'! Just use your secret number u. Easy!', {typing: true, delay: 100 });
+
+        this.echo("\n\n")
+        await this.echo('While you did your number crunching, I was also doing a calculation. My value for b='+b+'! Keep it in mind, you\'ll need it!', {typing: true, delay: 100 });
+
+        let c = this;
+        this.read('Please tell me, a=').then(async function(string) {
+            console.log(string);
+            await c.echo('Thanks! We\'re half way there, but I need you to do one last calculation.', {typing: true, delay: 100 });
+            c.echo("<math><mrow><mi>k</mi> <mo>=</mo> <msup><mi>b</mi><mi>u</mi></msup> <mo>mod</mo> <mi>p</mi></mrow></math>", {raw: true});
+            c.echo("<math> <mo>&#x21d2;</mo> <mrow><mi>k</mi> <mo>=</mo> <msup><mi>"+b+"</mi><mi>u</mi></msup> <mo>mod</mo> <mi>"+p+"</mi></mrow> </math>", {raw: true});
+            await c.echo('Remember that u is your secret number', {typing: true, delay: 100 });
+            await c.echo('I was also able to calculate the value of k with my the number you told me. This will be our shared secret from now on!', {typing: true, delay: 100 });
+            
+            var k = Math.pow(string, v) % p;
+            window.setHarloweVariable("$dhSharedSecret", k);
+        });
+    }
+}

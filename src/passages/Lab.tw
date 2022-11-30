@@ -1,15 +1,15 @@
 :: lab [lab] {"position":"200,0"}
 ==>
-(button: "==X")[[inventory->inventory]]
+(button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
-###Old computer lab
+###(text-style:"underline")[(font:'Courier New')[Old computer lab]]
 
-(box:"X", 5)[Oh wow, that´s not a lab... that´s just a depressing room with one PC in it. 
-No wonder John quit...]
+(box:"X", 5)[(font:'Courier New')[Oh wow, that´s not a lab... that´s just a depressing room with one PC in it. 
+No wonder John quit...]]
 
-(button: "XXX==")[[[change rooms and go to office->office]]]
-(button: "XX==")[[[take a closer look at the pc->pc]]]
-(button: "XX==")[[[prologue->prologue]]]
+(button: "XXX==")[(colour: white)[(font:'Courier New')[[change rooms and go to office->office]]]]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[take a closer look at the pc->pc]]]]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[prologue->prologue]]]]
 <script>
 window.onkeydown = null;
 </script>
