@@ -90,6 +90,15 @@ function cat() {
                 for (let i = 0; i < cdContent.length; i++) {
                     const f = cdContent[i];
                     if (f.get("name") == file) {
+                        // in case the file is encrypted
+                        if(f.has("isEnc") && f.get("isEnc")) {
+                            this.read("The file is encrypted, pls enter the password:").then(async function(inp) {
+                                if(f.get("key") == inp) {
+                                    this.echo(f.get("content"));
+                                }
+                            });
+                            return;
+                        }
                         this.echo(f.get("content"));
                         return;
                     }
