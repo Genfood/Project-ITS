@@ -1,16 +1,19 @@
 :: inventory {"position":"700,200"}
 (set: _lastPassage to (history:)'s last)\
 <!--(set: $inventory to it + (a: (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", false)))\-->
-#(text-style:"underline")[(font:'Courier New')[Inventory]]
+(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+###(text-style:"underline")[(font:'Courier New')[Inventory]]
 {
     (unless: $inventory's length is 0) [
-You have the following items in your inventory: <!--(joined: ", ", ...$inventory)-->
+(colour: white)[(font:'Courier New')[You have the following items in your inventory:]] <!--(joined: ", ", ...$inventory)-->
 
         (for: each _item, ...$inventory) [{
             (set: _display to _item's displayText)
             (set: _isUsable to _item's isUsable)
             (set: _isExternalLink to _item's isExternalLink)
             (set: _description to _item's description)
+            (set: _hasPassage to _item's hasPassage)
+            (set: _passage to _item's passage)
             * (link-rerun: _display)[ <!--maybe change this to the inventory item-->
                 (if: _isUsable)+(if: _lastPassage is "pc")[
                     (dialog: [_description], "Go for it ...")
@@ -18,11 +21,12 @@ You have the following items in your inventory: <!--(joined: ", ", ...$inventory
                     (goto: _lastPassage)
                 ] (else-if: _isExternalLink) [
                     (open-url: _description)
+                ] (else-if: _hasPassage) [
+                    (goto: _passage)
                 ] (else:)[
                     (dialog: [_description], "Ahhhhhh ...")
-                ]
-                
-                ]<!--(unless: $inventory's last is _item)[, ]-->
+                ]    
+            ]<!--(unless: $inventory's last is _item)[, ]-->
         }]
     ] (else:) [
         Your inventory is empty. 🥺\

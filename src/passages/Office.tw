@@ -2,12 +2,14 @@
 ==>
 (button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
+(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+
 ###(text-style:"underline")[(font:'Courier New')[Old office of John]]
 (font:'Courier New')[The smell of your predecessor is still in the air...
 The room is cold and totally empty beside of:]
 
 <!-- ||== -->
- (css: "font-size: 100%;")[a chaotic desk]
+ (font:'Courier New')[a chaotic desk]
 (box:"X", 45)[
 |desk>[<img class="floating" src="../src/images/desk3.jpg"/>]
 |noteImp>[{(click-replace:?noteImp) [(set: $inventory to it + (a: $invNoteCaeserCipher))]
@@ -37,10 +39,12 @@ The room is cold and totally empty beside of:]
     ]}]]
 <!-- |==| -->
  <!-- =| -->
-(box:"=XX=", 20)[(css: "font-size: 100%;")[a mysterious office container (unless: $officeContainerIsUnlocked)[, that seems to be locked]]
+ (font:'Courier New')[a mysterious office container (unless: $officeContainerIsUnlocked)[, that seems to be locked]]
+(box:"=XX=", 20)[
 [[<img class="floating" src="../src/images/office-container.png" width="200" height="300"/>->officeContainer]]]
  <!-- =| -->
-(box:"=XX=", 20)[(css: "font-size: 100%;")[a dusty bookshelf]
+(font:'Courier New')[a dusty bookshelf]
+(box:"=XX=", 20)[
 [[<img class="floating" src="../src/images/bookshelf.png" width="300" height="400"/>->bookshelf]]]
  <!-- |==| -->
 

@@ -5,35 +5,32 @@
     (else:)[(goto: "office")]\
 ]\
 ==>
-(button: "==X")[[inventory->inventory]]
+(button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
+(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+
 $officeContainerIsUnlocked[\
-    ###Office container]\
+    ###(colour: white)[(font:'Courier New')[Office container]]]\
 \
 \
 \
 \
-(set: _book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false))\
-(set: _book2 to (dm: "displayText", "Buch Nummer 2", "name", "book2", "description", "", "isExternalLink", false, "isUsable", false))\
-(set: _note1 to (dm: "displayText", "Ein zerknüllter Zettel", "name", "note1", "description", "", "isExternalLink", false, "isUsable", false))\
-(set: _note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false))\
-(set: _note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false))\
-(set: _note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false))\
+
 |drawer1>[\
-* ($inventoryItem: _book1)
+* ($inventoryItem: $book1)
 * ($inventoryItem: $invSmartphone)
-(link-rerun: "open lower drawer")[(show: ?drawer2)(hide: ?drawer1)]\
+(colour: white)[(font:'Courier New')[(link-rerun: "open lower drawer")[(show: ?drawer2)(hide: ?drawer1)]]]\
 ]\
 |drawer2)[\
 * ($inventoryItem: $invUSB)
-* ($inventoryItem: _note2)
-* ($inventoryItem: _note3)
-* ($inventoryItem: _note4)
+* ($inventoryItem: $note2)
+* ($inventoryItem: $note3)
+* ($inventoryItem: $note4)
 * ($inventoryItem: $cd)
-(link-rerun: "open upper drawer")[(show: ?drawer1)(hide: ?drawer2)]\
+(colour: white)[(font:'Courier New')[(link-rerun: "open upper drawer")[(show: ?drawer1)(hide: ?drawer2)]]]\
 ]
 
 
 (if: visits > 3)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy1")(hide: ?guy1)]\
 (if: visits > 3)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy2")]
-(button: "XX==")[[[back to the office->office]]]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[back to the office->office]]]]
