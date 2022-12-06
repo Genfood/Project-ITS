@@ -85,15 +85,18 @@
     (set: $note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
 
 }
+
+(set: $fileCounter to 0)
+
 <!--DEBUG ONLY-->
 (set: $inventory to it + (a: $cd))
 (set: $name to "Flo")
 <!--only debug! set preffered passage here:-->
-(goto: "lab")
+ (goto: "office")
 
 (live: 50ms)[
     <!--Put all set up user questions here:-->
-    (set: $name to (prompt: "Enter your name working slave:", ""))
+    (set: $name to (prompt: "Hey player, enter your name:", ""))
     <!--Check if inputs are valid...-->
     (unless: $name is "")[
         (stop:)

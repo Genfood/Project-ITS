@@ -1,8 +1,10 @@
 :: pc {"position":"400,0"}
 ==>
-(button: "==X")[[inventory->inventory]]
+(button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
-#a fucking old and slow pc
+(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+
+###(font:'Courier New')[a fucking old and slow pc]
 {
     <img src="../src/images/pc.png"/>
     |terminal>[<div class="terminal-container"></div>]

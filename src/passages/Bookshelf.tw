@@ -1,10 +1,12 @@
 :: bookshelf [bookshelf] {"position":"200,275"}
 ==>
-(button: "==X")[[inventory->inventory]]
+(button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
-## You are standing in front of the bookshelf
-The bookshelf is this boring IKEA thing everbody has in their apartment. It´s filled with a bunch of books and magazines.
-A few of them jump into your eye:
+(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+
+###(colour: white)[(font:'Courier New')[You are standing in front of the bookshelf]]
+(colour: white)[(font:'Courier New')[The bookshelf is this boring IKEA thing everbody has in their apartment. It´s filled with a bunch of books and magazines.
+A few of them jump into your eye:]]
 
 * ($inventoryItem: $invCeaserCipherBook)
 * ($inventoryItem: $invPlayboy)
@@ -18,4 +20,4 @@ A few of them jump into your eye:
 Some of them seem more interesting to you than others...
 but remember your mission: You need to learn about Cryptography!
 
-(button: "XX==")[[back to office->office]]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[back to office->office]]]]

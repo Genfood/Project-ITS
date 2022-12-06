@@ -6,7 +6,10 @@
 
 Because of leaked UFO footage, your boss is going nuts and wants you to encrypt all data using suitable methods to prevent further leakages to the public. Until now, all of the organisation´s highly sensitive data has been stored unencrypted and your department is not allowed to hire an external encryption expert because of the top secret classification. Your tasks is to teach yourself in encryption and choose suitable methods to protect your department´s data against the public. 
 
-John has been the only person in the secret lab that had a clue concerning IT stuff, so maybe he left something that could help you. 
+To prove your boss that you´re a pro in encryption, you have to collect (text-style:"underline")[3 hidden files]. Don´t show up at your boss´ office until you found them all!
+
+John has been the only person in the secret lab that had an idea concerning computer stuff, so maybe he left something that could help you to find these files. 
+
 You could start with checking out either John´s office or the old computer lab John regularly visited.]]
 
 (box:"==XXX", 16)[(opacity: 0.75)[($theItGuy:"By the way: I´m your imagination of John, I will help you in case your stuck. No worries!", "guyPrologue")]]

@@ -5,10 +5,12 @@
     (else:)[(goto: "office")]\
 ]\
 ==>
-(button: "==X")[[inventory->inventory]]
+(button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
+(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+
 $officeContainerIsUnlocked[\
-    ###Office container]\
+    ###(colour: white)[(font:'Courier New')[Office container]]]\
 \
 \
 \
@@ -17,7 +19,7 @@ $officeContainerIsUnlocked[\
 |drawer1>[\
 * ($inventoryItem: $book1)
 * ($inventoryItem: $invSmartphone)
-(link-rerun: "open lower drawer")[(show: ?drawer2)(hide: ?drawer1)]\
+(colour: white)[(font:'Courier New')[(link-rerun: "open lower drawer")[(show: ?drawer2)(hide: ?drawer1)]]]\
 ]\
 |drawer2)[\
 * ($inventoryItem: $invUSB)
@@ -25,10 +27,10 @@ $officeContainerIsUnlocked[\
 * ($inventoryItem: $note3)
 * ($inventoryItem: $note4)
 * ($inventoryItem: $cd)
-(link-rerun: "open upper drawer")[(show: ?drawer1)(hide: ?drawer2)]\
+(colour: white)[(font:'Courier New')[(link-rerun: "open upper drawer")[(show: ?drawer1)(hide: ?drawer2)]]]\
 ]
 
 
 (if: visits > 3)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy1")(hide: ?guy1)]\
 (if: visits > 3)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy2")]
-(button: "XX==")[[[back to the office->office]]]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[back to the office->office]]]]
