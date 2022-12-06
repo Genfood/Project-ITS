@@ -1,1 +1,9 @@
 :: smartphone [smartphone] {"position":"0,200"}
+
+(if: $dhSharedSecret is 0) [
+    The smartphone is locked. I might have some success by connecting to his old server first.
+] (else:) [
+    (set: _code to (prompt: "Shit! The smartphone is still locked and is asking for a secret PIN. What was the shared secret again?", ""))\
+    (if:_code is $dhSharedSecret)[(set: $smartphoneUnlocked to true)]\
+    (else:)[(goto: "smartphone")]\
+]
