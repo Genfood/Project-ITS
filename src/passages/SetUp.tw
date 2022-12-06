@@ -88,11 +88,11 @@
 
 (set: $fileCounter to 0)
 
-<!--DEBUG ONLY-->
+<!-- DEBUG ONLY
 (set: $inventory to it + (a: $cd))
 (set: $name to "Flo")
-<!--only debug! set preffered passage here:-->
- (goto: "office")
+only debug! set preffered passage here:
+(goto: "office") -->
 
 (live: 50ms)[
     <!--Put all set up user questions here:-->
