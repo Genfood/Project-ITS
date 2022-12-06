@@ -58,3 +58,9 @@ tw-story[tags ~= "lab"] {
   background-repeat: no-repeat;
 } 
 
+tw-story[tags ~= "desk"] {
+  background-image: url(../src/images/desk3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+

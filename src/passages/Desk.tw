@@ -1,8 +1,91 @@
-:: desk {"position":"400,200"}
-## Wow, that desk is messy
+:: desk [desk] {"position":"400,200"}
+###(font:'Courier New')[Wow, that desk is messy]
 
-Passage might be deleted as items are collected via clicking on images
+||== 
+(box:"X", 10) [
+|noteImp>[{(click-replace:?noteImp) [(set: $inventory to it + (a: $invNoteCaeserCipher))]
+    <img id="note-imp" src="../src/images/note_important.png">
+    (if: ($doesInvContain: "noteImportant")) [
+        (hide: ?noteImp)
+    ]}]
+]
+=|
+(box:"X", 10) [
+|paper>[{(click-replace:?paper) [(set: $inventory to it + (a: $invPaper))]
+    <img id="paper" src="../src/images/Papier.png">
+    (if: ($doesInvContain: "invPaper")) [
+        (hide: ?paper)
+    ]}]
+]
+=|
+(box:"X", 10) [
+|pens>[{(click-replace:?pens) [(set: $inventory to it + (a: $invPens))]
+    <img id="pens" src="../src/images/Pens.png">
+    (if: ($doesInvContain: "invPens")) [
+        (hide: ?pens)
+    ]}]
+]
+|==|
+||== 
+(box:"X", 10) [
+|paperclips>[{(click-replace:?paperclips) [(set: $inventory to it + (a: $invPaperclips))]
+    <img id="paperclips" src="../src/images/paperclips.png">
+    (if: ($doesInvContain: "invPaperclips")) [
+        (hide: ?paperclips)
+    ]}]
+]
+=|
+(box:"X", 10) [
+|scissors>[{(click-replace:?scissors) [(set: $inventory to it + (a: $invScissors))]
+    <img id="scissors" src="../src/images/Scissors.png">
+    (if: ($doesInvContain: "invScissors")) [
+        (hide: ?scissors)
+    ]}]
+]
+=|
+(box:"X", 10) [
+|can>[{(click-replace:?can) [(set: $inventory to it + (a: $invCan))]
+    <img id="can" src="../src/images/Can.png">
+    (if: ($doesInvContain: "invCan")) [
+        (hide: ?can)
+    ]}]
+]
+|==|
 
 
-[[office->office]]
-[[inventory->inventory]]
+<style>
+
+#note-imp {
+    max-width: 20%;
+    max-height: 20%;
+}
+
+#paper {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+#pens {
+    max-width:60%;
+    max-height:60%;
+}
+
+#paperclips {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+#scissors {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+#can {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+
+</style>
+
+(button: "XX==")[(colour: white)[(font:'Courier New')[[back to office->office]]]]

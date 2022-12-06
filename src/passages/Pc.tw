@@ -32,7 +32,7 @@
     (dm: "name", "OTP_file.info", "content", "Use the decimal representation of the encrypted message in .data file to open file."),
     (dm: "name", "file", "content", "...","isEnc", true, "key", "19066400827352")))
 (set: $path to "~/")
-You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.
+(font:'Courier New')[You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.]
 }
 <!-- |cdContent)[(for: each _item, ..._cdContent)[-rw-------    1 Thomas  staff      25 18 Okt 22:01 _item<br>]]
 $name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></div> -->
@@ -150,7 +150,7 @@ math {
 }
 </style>
 
-(button: "XX==")[[[back to the lab->lab]]]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[back to the lab->lab]]]]
 
 <!--
 (set: $toggleOnKeyDown to 0)
