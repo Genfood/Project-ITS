@@ -13,22 +13,17 @@ $officeContainerIsUnlocked[\
 \
 \
 \
-(set: _book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false))\
-(set: _book2 to (dm: "displayText", "Buch Nummer 2", "name", "book2", "description", "", "isExternalLink", false, "isUsable", false))\
-(set: _note1 to (dm: "displayText", "Ein zerknüllter Zettel", "name", "note1", "description", "", "isExternalLink", false, "isUsable", false))\
-(set: _note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false))\
-(set: _note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false))\
-(set: _note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false))\
+
 |drawer1>[\
-* ($inventoryItem: _book1)
+* ($inventoryItem: $book1)
 * ($inventoryItem: $invSmartphone)
 (link-rerun: "open lower drawer")[(show: ?drawer2)(hide: ?drawer1)]\
 ]\
 |drawer2)[\
 * ($inventoryItem: $invUSB)
-* ($inventoryItem: _note2)
-* ($inventoryItem: _note3)
-* ($inventoryItem: _note4)
+* ($inventoryItem: $note2)
+* ($inventoryItem: $note3)
+* ($inventoryItem: $note4)
 * ($inventoryItem: $cd)
 (link-rerun: "open upper drawer")[(show: ?drawer1)(hide: ?drawer2)]\
 ]

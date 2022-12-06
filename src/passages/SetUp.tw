@@ -5,7 +5,7 @@
 (set: $inventory to (a:))
 
 <!--Data Map type set up here:-->
-(set: $inventoryItemType to (dm: "displayText", str, "name", str, "description", str, "isExternalLink", bool, "isUsable", bool))
+(set: $inventoryItemType to (dm: "displayText", str, "name", str, "description", str, "isExternalLink", bool, "isUsable", bool, "hasPassage", bool, 'passage', str))
 
 
 <!--macro set up here:-->
@@ -59,24 +59,30 @@
 
 <!--define inventory items here, it is not a must, but could be handy in some cases.-->
 {
-    (set: $cd to (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", true))
-    (set: $invUSB to (dm: "displayText", "dusty USB stick", "name", "invUSB", "description", "Maybe I can use it in the Lab", "isExternalLink", false, "isUsable", true))
-    (set: $invSmartphone to (dm: "displayText", "John´s old smartphone", "name", "invSmartphone", "description", "I guess John should have dropped this at the IT department", "isExternalLink", false, "isUsable", true))
-    (set: $invNoteCaeserCipher to (dm: "displayText", "an important note collected from the desk", "name", "noteImportant", "description", "mjqqtbtwqi use CC 5", "isExternalLink", false, "isUsable", false))
-    (set: $invCeaserCipherBook to (dm: "displayText", "Caeser-Chiffre: A simpler guide to the simplest encryption ever", "name", "invCeaserCipherBook", "description", "https://brilliant.org/wiki/caesar-cipher/", "isExternalLink", true, "isUsable", false))
-    (set: $invDHBook to (dm: "displayText", "Diffie-Hellmann for Dummies", "name", "invDHBook", "description", "https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange", "isExternalLink", true, "isUsable", false))
-    (set: $invHashBook to (dm: "displayText", "How to hash important stuff like passwords", "name", "invHashBook", "description", "https://en.wikipedia.org/wiki/Hash_function", "isExternalLink", true, "isUsable", false))
-    (set: $invRSABook to (dm: "displayText", "RSA: have fun", "name", "invRSABook", "description", "https://en.wikipedia.org/wiki/RSA_(cryptosystem)", "isExternalLink", true, "isUsable", false))
-    (set: $invMug to (dm: "displayText", "A useless coffee mug", "name", "invMug", "description", "a coffee mug with a slogan: If you call me nerd, I will call you an ambulance", "isExternalLink", false, "isUsable", false))
-    (set: $invPlayboy to (dm: "displayText", "Playboy issue #7 of 1986", "name", "invPlayboy", "description", "Guess, that won´t help you for now... ;)", "isExternalLink", false, "isUsable", false))
-    (set: $invRifles to (dm: "displayText", "A magazine for rifles", "name", "invRifles","description", "What a bullsh*t!", "isExternalLink", false, "isUsable", false))
-    (set: $invNature to (dm: "displayText", "A Nature Lifestlye magazin called 'Fish and Flesh'", "name", "invNature","description", "I doubt that John ever set foot in nature.", "isExternalLink", false, "isUsable", false))
-    (set: $invEdgar to (dm: "displayText", "The Gold Bug by Edgar Allan Poe", "name", "invEdgar", "description", "Didn´t know that John was interested in that kind of literature...", "isExternalLink", false, "isUsable", false))
-    (set: $invPaper to (dm: "displayText", "bunch of papers collected from desk", "name", "invPaper", "description", "Most of the papers are blank, nothing interesting here", "isExternalLink", false, "isUsable", false))
-    (set: $invPaperclips to (dm: "displayText", "paper clips collected from desk", "name", "invPaperclips", "description", "You´re not James Bond... don´t even try opening something with it", "isExternalLink", false, "isUsable", false))
-    (set: $invScissors to (dm: "displayText", "scissors collected from desk", "name", "invScissors", "description", "cool scissors", "isExternalLink", false, "isUsable", false))
-    (set: $invPens to (dm: "displayText", "coloured pens collected from desk", "name", "invPens", "description", "what do you wanna do? draw a nice picture or what?", "isExternalLink", false, "isUsable", false))
+    (set: $cd to (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", true, "hasPassage", false, "passage", ""))
+    (set: $invUSB to (dm: "displayText", "dusty USB stick", "name", "invUSB", "description", "Maybe I can use it in the Lab", "isExternalLink", false, "isUsable", true, "hasPassage", false, "passage", ""))
+    (set: $invSmartphone to (dm: "displayText", "John´s old smartphone", "name", "invSmartphone", "description", "I guess John should have dropped this at the IT department", "isExternalLink", false, "isUsable", true, "hasPassage", true, "passage", "smartphone"))
+    (set: $invNoteCaeserCipher to (dm: "displayText", "an important note collected from the desk", "name", "noteImportant", "description", "mjqqtbtwqi use CC 5", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invCeaserCipherBook to (dm: "displayText", "Caeser-Chiffre: A simpler guide to the simplest encryption ever", "name", "invCeaserCipherBook", "description", "https://brilliant.org/wiki/caesar-cipher/", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", "")
+    (set: $invDHBook to (dm: "displayText", "Diffie-Hellmann for Dummies", "name", "invDHBook", "description", "https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invHashBook to (dm: "displayText", "How to hash important stuff like passwords", "name", "invHashBook", "description", "https://en.wikipedia.org/wiki/Hash_function", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invRSABook to (dm: "displayText", "RSA: have fun", "name", "invRSABook", "description", "https://en.wikipedia.org/wiki/RSA_(cryptosystem)", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invMug to (dm: "displayText", "A useless coffee mug", "name", "invMug", "description", "a coffee mug with a slogan: If you call me nerd, I will call you an ambulance", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invPlayboy to (dm: "displayText", "Playboy issue #7 of 1986", "name", "invPlayboy", "description", "Guess, that won´t help you for now... ;)", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invRifles to (dm: "displayText", "A magazine for rifles", "name", "invRifles","description", "What a bullsh*t!", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invNature to (dm: "displayText", "A Nature Lifestlye magazin called 'Fish and Flesh'", "name", "invNature","description", "I doubt that John ever set foot in nature.", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invEdgar to (dm: "displayText", "The Gold Bug by Edgar Allan Poe", "name", "invEdgar", "description", "Didn´t know that John was interested in that kind of literature...", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invPaper to (dm: "displayText", "bunch of papers collected from desk", "name", "invPaper", "description", "Most of the papers are blank, nothing interesting here", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invPaperclips to (dm: "displayText", "paper clips collected from desk", "name", "invPaperclips", "description", "You´re not James Bond... don´t even try opening something with it", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invScissors to (dm: "displayText", "scissors collected from desk", "name", "invScissors", "description", "cool scissors", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invPens to (dm: "displayText", "coloured pens collected from desk", "name", "invPens", "description", "what do you wanna do? draw a nice picture or what?", "isExternalLink", false, "isUsable", false,, "hasPassage", false, "passage", ""))
 
+    (set: $book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $book2 to (dm: "displayText", "Buch Nummer 2", "name", "book2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $note1 to (dm: "displayText", "Ein zerknüllter Zettel", "name", "note1", "description", "", "isExternalLink", false, "isUsable", false, false, ""))
+    (set: $note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
 
 }
 <!--DEBUG ONLY-->
