@@ -142,7 +142,6 @@ math {
     top: -470pt;
     left: 192pt;
     border-radius: 11pt;
-    position: absolute;
 }
 
 #power {
