@@ -80,7 +80,7 @@
 
     (set: $book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $book2 to (dm: "displayText", "Buch Nummer 2", "name", "book2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $note1 to (dm: "displayText", "Ein zerknüllter Zettel", "name", "note1", "description", "", "isExternalLink", false, "isUsable", false, false, ""))
+    <!-- (set: $note1 to (dm: "displayText", "Ein zerknüllter Zettel", "name", "note1", "description", "", "isExternalLink", false, "isUsable", false, false, "")) -->
     (set: $note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
@@ -95,9 +95,9 @@
 only debug! set preffered passage here:
 (goto: "office") -->
 
-
-(dialog: [Disclaimer:  
-All encryption techniques and algorithms shown in this game are for entertaiment purposes only
+<!--Disclaimer:-->
+(dialog: [(text-style:"underline")[Disclaimer]  
+All encryption techniques and algorithms shown in this game are for (text-style:"underline")[entertaiment purposes only]
 and aim to give an exemplary introduction into the field of cryptography. Please consider this,
 if you want to apply cryptography techniques in your private or professional environment.
 ], "Got it.")
