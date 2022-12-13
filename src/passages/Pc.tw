@@ -2,7 +2,7 @@
 ==>
 (button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
-(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+($printFileCounter:)
 
 ###(font:'Courier New')[a fucking old and slow pc]
 {

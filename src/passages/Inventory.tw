@@ -1,7 +1,7 @@
 :: inventory {"position":"700,200"}
 (set: _lastPassage to (history:)'s last)\
 <!--(set: $inventory to it + (a: (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", false)))\-->
-(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+($printFileCounter:)
 ###(text-style:"underline")[(font:'Courier New')[Inventory]]
 {
     (unless: $inventory's length is 0) [

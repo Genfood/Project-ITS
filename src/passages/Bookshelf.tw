@@ -2,7 +2,7 @@
 ==>
 (button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
-(opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: $fileCounter / 3]]]
+($printFileCounter:)
 
 ###(colour: white)[(font:'Courier New')[You are standing in front of the bookshelf]]
 (colour: white)[(font:'Courier New')[The bookshelf is this boring IKEA thing everbody has in their apartment. It´s filled with a bunch of books and magazines.

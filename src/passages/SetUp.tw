@@ -9,6 +9,13 @@
 
 
 <!--macro set up here:-->
+<!--Print file counter-->
+(set: $printFileCounter to (macro:[
+    (output:)[{
+        (opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: (live: 50ms)[$fileCounter / 3]]]]
+    }]
+]))
+
 <!--renders a fat IT guy-->
 (set: $theItGuy to (macro: str-type _bubbleText, str-type _id, [
     (output:)[\
