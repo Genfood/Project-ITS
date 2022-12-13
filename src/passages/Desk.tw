@@ -1,4 +1,9 @@
 :: desk [desk] {"position":"400,200"}
+==>
+(button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
+<==
+($printFileCounter:)
+
 ###(font:'Courier New')[Wow, that desk is messy]
 
 ||== 
@@ -56,23 +61,23 @@
 <style>
 
 #note-imp {
-    max-width: 20%;
-    max-height: 20%;
+    max-width: 40%;
+    max-height: 40%;
 }
 
 #paper {
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 #pens {
-    max-width:60%;
-    max-height:60%;
+    max-width:80%;
+    max-height:80%;
 }
 
 #paperclips {
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 40%;
+    max-height: 40%;
 }
 
 #scissors {
@@ -81,8 +86,8 @@
 }
 
 #can {
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 

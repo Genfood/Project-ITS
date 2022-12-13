@@ -75,7 +75,7 @@
     (set: $invCeaserCipherBook to (dm: "displayText", "Caeser-Chiffre: A simpler guide to the simplest encryption ever", "name", "invCeaserCipherBook", "description", "https://brilliant.org/wiki/caesar-cipher/", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invDHBook to (dm: "displayText", "Diffie-Hellmann for Dummies", "name", "invDHBook", "description", "https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invHashBook to (dm: "displayText", "How to hash important stuff like passwords", "name", "invHashBook", "description", "https://en.wikipedia.org/wiki/Hash_function", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $invRSABook to (dm: "displayText", "RSA: have fun", "name", "invRSABook", "description", "https://en.wikipedia.org/wiki/RSA_(cryptosystem)", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
+    <!-- (set: $invRSABook to (dm: "displayText", "RSA: have fun", "name", "invRSABook", "description", "https://en.wikipedia.org/wiki/RSA_(cryptosystem)", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", "")) -->
     (set: $invMug to (dm: "displayText", "A useless coffee mug", "name", "invMug", "description", "a coffee mug with a slogan: If you call me nerd, I will call you an ambulance", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invPlayboy to (dm: "displayText", "Playboy issue #7 of 1986", "name", "invPlayboy", "description", "Guess, that won´t help you for now... ;)", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invRifles to (dm: "displayText", "A magazine for rifles", "name", "invRifles","description", "What a bullsh*t!", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
@@ -89,7 +89,6 @@
 
     (set: $book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $book2 to (dm: "displayText", "Buch Nummer 2", "name", "book2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    <!-- (set: $note1 to (dm: "displayText", "Ein zerknüllter Zettel", "name", "note1", "description", "", "isExternalLink", false, "isUsable", false, false, "")) -->
     (set: $note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
@@ -107,11 +106,10 @@ only debug! set preffered passage here:
 (goto: "office") -->
 
 <!--Disclaimer:-->
-(dialog: [(text-style:"underline")[Disclaimer]  
+(dialog: [(text-style:"bold")[(text-style:"underline")[Disclaimer]  
 All encryption techniques and algorithms shown in this game are for (text-style:"underline")[entertaiment purposes only]
-and aim to give an exemplary introduction into the field of cryptography. Please consider this,
-if you want to apply cryptography techniques in your private or professional environment.
-], "Got it.")
+and aim to give an exemplary introduction into the field of cryptography. Please consider this, if you want to apply cryptography techniques in your private or professional environment.
+]], "Got it.")
 
 
 (live: 50ms)[

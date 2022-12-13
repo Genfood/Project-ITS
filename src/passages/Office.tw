@@ -8,96 +8,24 @@
 (font:'Courier New')[The smell of your predecessor is still in the air...
 The room is cold and totally empty beside of:]
 
-<!-- ||== -->
- (font:'Courier New')[a chaotic desk]
-(box:"X", 45)[
-|desk>[<img class="floating" src="../images/desk3.jpg"/>]
-|noteImp>[{(click-replace:?noteImp) [(set: $inventory to it + (a: $invNoteCaeserCipher))]
-    <img id="note-imp" src="../images/note_important.png">
-    (if: ($doesInvContain: "noteImportant")) [
-        (hide: ?noteImp)
-    ]}]
-|paper>[{(click-replace:?paper) [(set: $inventory to it + (a: $invPaper))]
-    <img id="paper" src="../images/Papier.png">
-    (if: ($doesInvContain: "invPaper")) [
-        (hide: ?paper)
-    ]}]
-|pens>[{(click-replace:?pens) [(set: $inventory to it + (a: $invPens))]
-    <img id="pens" src="../images/Pens.png">
-    (if: ($doesInvContain: "invPens")) [
-        (hide: ?pens)
-    ]}]
-|paperclips>[{(click-replace:?paperclips) [(set: $inventory to it + (a: $invPaperclips))]
-    <img id="paperclips" src="../images/paperclips.png">
-    (if: ($doesInvContain: "invPaperclips")) [
-        (hide: ?paperclips)
-    ]}]
-|scissors>[{(click-replace:?scissors) [(set: $inventory to it + (a: $invScissors))]
-    <img id="scissors" src="../images/Scissors.png">
-    (if: ($doesInvContain: "invScissors")) [
-        (hide: ?scissors)
-    ]}]
-    ]
-<!-- |==| -->
- <!-- =| -->
- (font:'Courier New')[a mysterious office container (unless: $officeContainerIsUnlocked)[, that seems to be locked]]
-(box:"=XX=", 20)[
-[[<img class="floating" src="../images/office-container.png" width="200" height="300"/>->officeContainer]]]
- <!-- =| -->
+||==
+[[<img class="floating" src="../images/desk4.jpg"/>->desk]]
+(font:'Courier New')[a chaotic desk]
+ =|
+[[<img class="floating" src="../images/office-container.png" width="200" height="300"/>->officeContainer]]
+ (font:'Courier New')[a mysterious office container(unless: $officeContainerIsUnlocked)[, that seems to be locked]]
+ =|
+[[<img class="floating" src="../images/bookshelf.png" width="300" height="400"/>->bookshelf]]
 (font:'Courier New')[a dusty bookshelf]
-(box:"=XX=", 20)[
-[[<img class="floating" src="../images/bookshelf.png" width="300" height="400"/>->bookshelf]]]
- <!-- |==| -->
+ |==|
 
 <style>
 .floating {
-    position: relative;
-    top: 0;
-    left: 0;
     max-width:100%;
     max-height:100%;
 }
-
-
-#note-imp {
-    top: -100px;
-    left: 50px;
-    max-width: 10%;
-    max-height: 10%;
-}
-
-#paper {
-    top: -500px;
-    left: 600px;
-    max-width: 20%;
-    max-height: 20%;
-}
-
-#pens {
-    top: -600px;
-    left: 100px;
-    max-width: 15%;
-    max-height:15%;
-}
-
-#paperclips {
-    top: -550px;
-    left: 200px;
-    max-width: 15%;
-    max-height: 15%;
-}
-
-#scissors {
-    top: -500px;
-    left: 100px;
-    max-width: 10%;
-    max-height: 10%;
-}
-
-
 </style>
 
-(box:"==XXX", 16)[(if: (visits > 3) and ($officeContainerIsUnlocked is false))[($theItGuy:"I would try to learn about Ceasar-Chiffre if you want to access my roll container", "guyOffice")]]
+(if: (visits > 3) and ($officeContainerIsUnlocked is false))[(box:"==XXX", 18)[($theItGuy:"I would try to learn about Ceasar-Chiffre if you want to access my roll container, and maybe I left a secret note on my desk...", "guyOffice")]]
 
 (button: "XX==")[(colour: white)[(font:'Courier New')[[change rooms and go to lab->lab]]]]
-[[desk->desk]]
