@@ -14,7 +14,7 @@
     (output:)[\
         (hook: _id)[\
             <div class="bubble bubble-bottom-left" contenteditable>_bubbleText</div>
-            <img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />\
+            <img class="dude" src="../images/The IT Guy.png" height="200" left="100" />\
         ]\
         (click-replace: (hooks-named:_id))[(unless: _id is "aua")[\
             ($theItGuy: "aua", "aua")\

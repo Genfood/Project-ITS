@@ -11,29 +11,29 @@ The room is cold and totally empty beside of:]
 <!-- ||== -->
  (font:'Courier New')[a chaotic desk]
 (box:"X", 45)[
-|desk>[<img class="floating" src="../src/images/desk3.jpg"/>]
+|desk>[<img class="floating" src="../images/desk3.jpg"/>]
 |noteImp>[{(click-replace:?noteImp) [(set: $inventory to it + (a: $invNoteCaeserCipher))]
-    <img id="note-imp" src="../src/images/note_important.png">
+    <img id="note-imp" src="../images/note_important.png">
     (if: ($doesInvContain: "noteImportant")) [
         (hide: ?noteImp)
     ]}]
 |paper>[{(click-replace:?paper) [(set: $inventory to it + (a: $invPaper))]
-    <img id="paper" src="../src/images/Papier.png">
+    <img id="paper" src="../images/Papier.png">
     (if: ($doesInvContain: "invPaper")) [
         (hide: ?paper)
     ]}]
 |pens>[{(click-replace:?pens) [(set: $inventory to it + (a: $invPens))]
-    <img id="pens" src="../src/images/Pens.png">
+    <img id="pens" src="../images/Pens.png">
     (if: ($doesInvContain: "invPens")) [
         (hide: ?pens)
     ]}]
 |paperclips>[{(click-replace:?paperclips) [(set: $inventory to it + (a: $invPaperclips))]
-    <img id="paperclips" src="../src/images/paperclips.png">
+    <img id="paperclips" src="../images/paperclips.png">
     (if: ($doesInvContain: "invPaperclips")) [
         (hide: ?paperclips)
     ]}]
 |scissors>[{(click-replace:?scissors) [(set: $inventory to it + (a: $invScissors))]
-    <img id="scissors" src="../src/images/Scissors.png">
+    <img id="scissors" src="../images/Scissors.png">
     (if: ($doesInvContain: "invScissors")) [
         (hide: ?scissors)
     ]}]
@@ -42,11 +42,11 @@ The room is cold and totally empty beside of:]
  <!-- =| -->
  (font:'Courier New')[a mysterious office container (unless: $officeContainerIsUnlocked)[, that seems to be locked]]
 (box:"=XX=", 20)[
-[[<img class="floating" src="../src/images/office-container.png" width="200" height="300"/>->officeContainer]]]
+[[<img class="floating" src="../images/office-container.png" width="200" height="300"/>->officeContainer]]]
  <!-- =| -->
 (font:'Courier New')[a dusty bookshelf]
 (box:"=XX=", 20)[
-[[<img class="floating" src="../src/images/bookshelf.png" width="300" height="400"/>->bookshelf]]]
+[[<img class="floating" src="../images/bookshelf.png" width="300" height="400"/>->bookshelf]]]
  <!-- |==| -->
 
 <style>

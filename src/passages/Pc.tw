@@ -6,7 +6,7 @@
 
 ###(font:'Courier New')[a fucking old and slow pc]
 {
-    <img src="../src/images/pc.png"/>
+    <img src="../images/pc.png"/>
     |terminal>[<div class="terminal-container"></div>]
     |powerButton>[<div id="power"></dic>]
     (set: _isTerminalHidden to false)
@@ -54,7 +54,7 @@ $name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></
 }
 {
 [<div class="bubble bubble-bottom-left" contenteditable>Yo dude I don't remember exactly where I left it, but you need a USB stick.</div>
-<img class="dude" src="../src/images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]](dude|
+<img class="dude" src="../images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]](dude|
 
 
 (set: $dhSharedSecret to 0)
