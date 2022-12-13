@@ -18,15 +18,17 @@
 
 <!--renders a fat IT guy-->
 (set: $theItGuy to (macro: str-type _bubbleText, str-type _id, [
-    (output:)[\
-        (hook: _id)[\
+    (output:)[{
+        <div id="footer">
+        (hook: _id)[
             <div class="bubble bubble-bottom-left" contenteditable>_bubbleText</div>
-            <img class="dude" src="../images/The IT Guy.png" height="200" left="100" />\
-        ]\
-        (click-replace: (hooks-named:_id))[(unless: _id is "aua")[\
-            ($theItGuy: "aua", "aua")\
-        ]]\
-    ]
+            <img class="dude" src="../images/The IT Guy.png" height="200" left="100" />
+        ]
+        </div>
+        (click-replace: (hooks-named:_id))[(unless: _id is "aua")[
+            ($theItGuy: "aua", "aua")
+        ]]
+    }]
 ]))
 
 <!--Prints one inventory item-->

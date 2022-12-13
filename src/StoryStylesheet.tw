@@ -33,9 +33,17 @@ tw-icon[title="Undo"], tw-icon[title="Redo"] {
 }
 
 .dude {
-    right: 110pt;
-     display: block;
-     margin-left: auto;
+  position: relative;
+  right: 110pt;
+  display: block;
+  margin-left: auto;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10pt;
+  z-index: 100;
 }
 
 
