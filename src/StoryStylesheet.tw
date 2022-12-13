@@ -40,26 +40,26 @@ tw-icon[title="Undo"], tw-icon[title="Redo"] {
 
 
 tw-story[tags ~= "prologue"] {
-  background-image: url(../src/images/bunker2.jpg);
+  background-image: url(../images/bunker2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 } 
 
 tw-story[tags ~= "office"] {
-  background-image: url(../src/images/office.jpg);
+  background-image: url(../images/office.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100%:
 } 
 
 tw-story[tags ~= "lab"] {
-  background-image: url(../src/images/wall.jpg);
+  background-image: url(../images/wall.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 } 
 
 tw-story[tags ~= "desk"] {
-  background-image: url(../src/images/desk3.jpg);
+  background-image: url(../images/desk3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 } 
