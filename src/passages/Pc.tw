@@ -30,7 +30,7 @@
     (dm: "name", "OTP_file.key.encfromrsa", "content", "17025474858527", "isEnc", true, "key", "^rR!*#.8ß"),
     (dm: "name", "OTP_file.data", "content", "33170895268295"),
     (dm: "name", "OTP_file.info", "content", "Use the decimal representation of the encrypted message in .data file to open file."),
-    (dm: "name", "file", "content", "...","isEnc", true, "key", "19066400827352")))
+    (dm: "name", "file", "content", "Congrats you found and decrypted one of the files! 🎉","isEnc", true, "key", "19066400827352")))
 (set: $path to "~/")
 (font:'Courier New')[You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.]
 }
@@ -77,28 +77,6 @@ var term = $('.terminal-container').terminal({
     ls: ls(),
     mount: mount(),
     verify: verify(),
-    /*openssl: function (command, ...args) {
-        //var args = Array.from(arguments);
-        var options = $.terminal.parse_options(args);
-
-        console.log(options);
-        console.log(command);
-        if (command == "rsautl") {
-            if (!options.decrypt || !options.encrypt) {
-                this.error("Specify decrypt or encrypt.");
-            } else if (options.inkey || options.in) {
-                this.error("no keyfile specified\nunable to load Private Key");
-            }
-
-            const p = 191n;
-            const q = 223n;
-            const n = p * q;
-            const phi = (p - 1n) * (q - 1n);
-            const e = 47n;
-
-            
-        }
-    }*/
 }, {
     greetings: 'Hello ' + $name + ', type help to get a list of available commands! ',
     prompt() {

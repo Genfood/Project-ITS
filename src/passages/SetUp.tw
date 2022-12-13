@@ -94,7 +94,9 @@
 
 }
 
+<!--Challenges solved vars:-->
 (set: $fileCounter to 0)
+(set: $isCDChallengeSolved to false)
 
 <!-- DEBUG ONLY
 (set: $inventory to it + (a: $cd))
