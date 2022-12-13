@@ -23,9 +23,6 @@ $officeContainerIsUnlocked[\
 ]\
 |drawer2)[\
 * ($inventoryItem: $invUSB)
-* ($inventoryItem: $note2)
-* ($inventoryItem: $note3)
-* ($inventoryItem: $note4)
 * ($inventoryItem: $cd)
 (colour: white)[(font:'Courier New')[(link-rerun: "open upper drawer")[(show: ?drawer1)(hide: ?drawer2)]]]\
 ]
