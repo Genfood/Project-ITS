@@ -102,11 +102,10 @@ only debug! set preffered passage here:
 (goto: "office") -->
 
 <!--Disclaimer:-->
-(dialog: [(text-style:"underline")[Disclaimer]  
+(dialog: [(text-style:"bold")[(text-style:"underline")[Disclaimer]  
 All encryption techniques and algorithms shown in this game are for (text-style:"underline")[entertaiment purposes only]
-and aim to give an exemplary introduction into the field of cryptography. Please consider this,
-if you want to apply cryptography techniques in your private or professional environment.
-], "Got it.")
+and aim to give an exemplary introduction into the field of cryptography. Please consider this, if you want to apply cryptography techniques in your private or professional environment.
+]], "Got it.")
 
 
 (live: 50ms)[

@@ -1,4 +1,9 @@
 :: desk [desk] {"position":"400,200"}
+==>
+(button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
+<==
+($printFileCounter:)
+
 ###(font:'Courier New')[Wow, that desk is messy]
 
 ||== 
