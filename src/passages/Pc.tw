@@ -2,28 +2,10 @@
 ==>
 (button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
 <==
-($printFileCounter:)
+<!--($printFileCounter:)-->
 
 ###(font:'Courier New')[a fucking old and slow pc]
-{
-    <img src="../images/pc.png"/>
-    |terminal>[<div class="terminal-container"></div>]
-    |powerButton>[<div id="power"></dic>]
-    (set: _isTerminalHidden to false)
-    (click-rerun:?powerButton)
-    [
-        (if: _isTerminalHidden) [
-            (show: ?terminal)
-            (set: _isTerminalHidden to false)
-        ] (else:) [
-            (hide: ?terminal)
-            (set: _isTerminalHidden to true)
-        ]  
-    ]
-}
-{
-(set: $insertedItem to $usedItem)
-(set: $cdContent to (a:
+{(set: $cdContent to (a:
     (dm: "name", "RSA_file.key", "content", "d=7085071307; n=7085811221"),
     (dm: "name", "RSA_file.enc", "content", "51191029 2221684278 1235109347 5932720573 5722816980 407222931 1597934719 6297126078 7002519417"),
     (dm: "name", "RSA_file.info", "content", "RSA file.enc contains and array with multiple RSA encrypted characters."),
@@ -32,26 +14,43 @@
     (dm: "name", "OTP_file.info", "content", "Use the decimal representation of the encrypted message in .data file to open file."),
     (dm: "name", "file", "content", "Congrats you found and decrypted one of the files! 🎉","isEnc", true, "key", "19066400827352")))
 (set: $path to "~/")
-(font:'Courier New')[You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.]
-}
-<!-- |cdContent)[(for: each _item, ..._cdContent)[-rw-------    1 Thomas  staff      25 18 Okt 22:01 _item<br>]]
-$name:~(text-style: "blink")[$]  <div id="input-line" style="display:inline;"></div> -->
+
 <!--The variable '$usedItem' contains the item the user clicked on. Set it always to  0, if you dont use it, to avoid missunderstandings in other passages. -->
-{(unless: $usedItem is 0)[\
+(unless: $usedItem is 0)[\
 (set: $path to "~/"+$usedItem's name)
 \(if: $usedItem's name is  is "USB Stick") [\
 \You fiddle around with the USB stick on the PC case. After you have turned the stick three times, it finally fits in.
 \]
 \(else-if: $usedItem's name is "CD") [\
     The CD looks pretty scratched...(show: ?cdContent)
-    (t8n: "slide-left")+(t8n-delay:3s)[\
         ($theItGuy: "Try the open command on some of the files... retard...", "dudeOpenPromt")\
-        ]\
     ]\
 \(else: )[Nice idea, but you'd probably have similar success with a banana.]
 \]
 (set: $usedItem to 0)\
+
+<div id="pc-container">
+    <img style="left: -130pt;" src="../images/pc.png"/>
+    |terminalFiller)[<div class="terminal-container-filler"></div>]
+    |terminal>[<div class="terminal-container"></div>]
+    |powerButton>[<div id="power"></dic>]
+    (set: _isTerminalHidden to false)
+    (click-rerun:?powerButton)
+    [
+        (if: _isTerminalHidden) [
+            (hide: ?terminalFiller)
+            (show: ?terminal)
+            (set: _isTerminalHidden to false)
+        ] (else:) [
+            (show: ?terminalFiller)
+            (hide: ?terminal)
+            (set: _isTerminalHidden to true)
+        ]  
+    ]</div>
 }
+<div id="filler" />
+(font:'Courier New')[You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.]
+(set: $insertedItem to $usedItem)
 {
 [<div class="bubble bubble-bottom-left" contenteditable>Yo dude I don't remember exactly where I left it, but you need a USB stick.</div>
 <img class="dude" src="../images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]](dude|
@@ -109,25 +108,38 @@ function color(name, string) {
 math {
     font-size: 25px;
 }
+#pc-container {
+    position: absolute;
 
+}
+.terminal-container-filler{
+    height: 271pt;
+    width: 364pt;
+    top: -467pt;
+    left: 63pt;
+}
 .terminal-container {
     height: 271pt;
     overflow-y: scroll;
     width: 364pt;
-    top: -470pt;
-    left: 192pt;
+    top: -467pt;
+    left: 63pt;
     border-radius: 11pt;
+}
+#filler {
+    height: 520pt;
+    width: 100pt;
 }
 
 #power {
     height: 30pt;
     width: 30pt;
     position: absolute;
-    top: -135pt;
-    left: 499pt;
+    top: -387pt;
+    left: 370pt;
 }
-</style>
 
+</style>
 (button: "XX==")[(colour: white)[(font:'Courier New')[[back to the lab->lab]]]]
 
 <!--
