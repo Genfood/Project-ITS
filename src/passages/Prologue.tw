@@ -12,7 +12,7 @@ John has been the only person in the secret lab that had an idea concerning comp
 
 You could start with checking out either John´s office or the old computer lab John regularly visited.]]
 
-(box:"==XXX", 16)[(opacity: 0.75)[($theItGuy:"By the way, $name: I´m your imagination of John, I will help you in case your stuck. No worries!", "guyPrologue")]]
+(opacity: 0.75)[($theItGuy:"By the way, $name: I´m your imagination of John, I will help you in case your stuck. No worries!", "guyPrologue")]
 (button:)[(colour: white)[(font:'Courier New')[[go to office->office]]]]
 (button:)[(colour: white)[(font:'Courier New')[[go to computer lab->lab]]]]
 
