@@ -4,7 +4,7 @@
 <==
 ($printFileCounter:)
 
-###(font:'Courier New')[a fucking old and slow pc]
+###(font:'Courier New')[a old and slow pc]
 {(set: $cdContent to (a:
     (dm: "name", "RSA_file.key", "content", "d=7085071307; n=7085811221"),
     (dm: "name", "RSA_file.enc", "content", "51191029 2221684278 1235109347 5932720573 5722816980 407222931 1597934719 6297126078 7002519417"),
@@ -22,9 +22,9 @@
 \You fiddle around with the USB stick on the PC case. After you have turned the stick three times, it finally fits in.
 \]
 \(else-if: $usedItem's name is "CD") [\
-    The CD looks pretty scratched...(show: ?cdContent)
-        ($theItGuy: "Try the open command on some of the files... retard...", "dudeOpenPromt")\
-    ]\
+The CD looks pretty scratched...(show: ?cdContent)
+    ($theItGuy: "Try the open command on some of the files... retard...", "dudeOpenPromt")\
+]\
 \(else: )[Nice idea, but you'd probably have similar success with a banana.]
 \]
 (set: $usedItem to 0)\
@@ -54,28 +54,40 @@
 {
 [<div class="bubble bubble-bottom-left" contenteditable>Yo dude I don't remember exactly where I left it, but you need a USB stick.</div>
 <img class="dude" src="../images/The IT Guy.png" height="200" left="100" />[(unless: visits > 2)[(hide:?dude)]]](dude|
-
+{
+    <div id="guy-1" class="hide">
+        ($theItGuy:"I would try writing a script to solve the RSA problem. This could be easier than using a calculator.", "guy-1")
+    </div>
+    <div id="guy-cd" class="hide">
+        ($theItGuy:"I would start with the RSA file.key, it could be helpful to decrypt the content of RSA file.enc. Also check the .info files. Type ls to list all files.", "guy-cd")
+    </div>
+}
 
 (set: $dhSharedSecret to 0)
 }
 <script>
 
 var term = $('.terminal-container').terminal({
-    te: function (user) {
-        this.echo('Hello ' + user);
+    whoami: function () {
+        this.echo($name);
     },
     help: function () {
         this.echo('Here is a list of available commands:');
         this.echo('')
         this.echo(' ls - List directory content');
-        this.echo(' cat - Show file content');
+        this.echo(' cat [file name] - Show file content');
         this.echo(' connect - Connect to your predecessor\'s server');
+        this.echo(' connect [Device] - you can easily mount a CD or a USB stick if you hav it in your inventory.');
+        this.echo(' verify rsa -m [Message] - you could verify if the message you decrypted is right.');
     },
     connect: connect(),
     cat: cat(),
     ls: ls(),
     mount: mount(),
     verify: verify(),
+    cancer: function () {
+        console.log(window.getHarloweVariable("$theItGuy"));
+    }
 }, {
     greetings: 'Hello ' + $name + ', type help to get a list of available commands! ',
     prompt() {
@@ -139,32 +151,9 @@ math {
     left: 370pt;
 }
 
+.hide {
+    display: none;
+}
+
 </style>
 (button: "XX==")[(colour: white)[(font:'Courier New')[[back to the lab->lab]]]]
-
-<!--
-(set: $toggleOnKeyDown to 0)
-<script>
-var keyDown = function(evt) {
-    var div = $('#input-line');
-
-    evt = evt || window.event;
-    var charCode = evt.which || evt.keyCode;
-    //alert(charCode);
-    if (charCode == 8) {
-        div.text(div.text().slice(0, -1));
-        return;
-    }
-    if (charCode == 13) {
-        // enter
-        var text = div.text();
-        var cmds = text.split(" ");
-        div.text("");
-        return;
-    }
-    var charStr = String.fromCharCode(charCode);
-    div.text(div.text() + charStr);
-};
-window.onkeydown = keyDown;
-</script>
--->

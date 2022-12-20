@@ -41,6 +41,7 @@ function verify() {
                     this.echo("verified!");
                 } else {
                     this.echo("wrong message!");
+                    $("#guy-1").show();
                 }
 
                 break;
@@ -143,7 +144,9 @@ function mount() {
             console.log(item);
             const itemName = item.get("name");
             if (itemName == searchFor) {
-
+                if (searchFor == "CD"){
+                    $("#guy-cd").show();
+                }
                 window.setHarloweVariable("$insertedItem", item);
                 window.setHarloweVariable("$path", "~/" + itemName);
                 return;
