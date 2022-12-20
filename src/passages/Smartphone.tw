@@ -8,9 +8,9 @@
     </div>
     
     ($theItGuy:"The smartphone is locked. You might have some success by connecting to his old server first. I'll show you the way ... wait!", "guy1")
-    <!--(live: 5s)[
+    (live: 5s)[
         (goto: "pc")
-    ]-->
+    ]
 ] (else:) [
     (set: _code to (prompt: "Shit! The smartphone is still locked and is asking for a secret PIN. What was the shared secret again?", ""))\
     (if:_code is (text:$dhSharedSecret))[
