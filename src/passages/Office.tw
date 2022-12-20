@@ -10,13 +10,13 @@ The room is cold and totally empty beside of:]
 
 ||==
 [[<img class="floating" src="../images/desk4.jpg"/>->desk]]
-(font:'Courier New')[a chaotic desk]
+(font:'Courier New')[chaotic desk]
  =|
-[[<img class="floating" src="../images/office-container.png" width="200" height="300"/>->officeContainer]]
- (font:'Courier New')[a mysterious office container(unless: $officeContainerIsUnlocked)[, that seems to be locked]]
+[[<img class="floating" src="../images/container2.png" width="200" height="300"/>->officeContainer]]
+ (font:'Courier New')[mysterious office container(unless: $officeContainerIsUnlocked)[, that seems to be locked]]
  =|
-[[<img class="floating" src="../images/bookshelf.png" width="300" height="400"/>->bookshelf]]
-(font:'Courier New')[a dusty bookshelf]
+[[<img class="floating" src="../images/bookshelf.png" width="200" height="300"/>->bookshelf]]
+(font:'Courier New')[dusty bookshelf]
  |==|
 
 <style>
