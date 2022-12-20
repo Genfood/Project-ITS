@@ -1,10 +1,16 @@
 :: smartphone [smartphone] {"position":"0,200"}
 
 (if: $dhSharedSecret is 0) [
+    
+    <div id="smartphone-container">
+        <img src="../images/Smartphone.png"/>
+        <div class="centered">LOCKED</div>
+    </div>
+    
     ($theItGuy:"The smartphone is locked. You might have some success by connecting to his old server first. I'll show you the way ... wait!", "guy1")
-    (live: 5s)[
+    <!--(live: 5s)[
         (goto: "pc")
-    ]
+    ]-->
 ] (else:) [
     (set: _code to (prompt: "Shit! The smartphone is still locked and is asking for a secret PIN. What was the shared secret again?", ""))\
     (if:_code is (text:$dhSharedSecret))[
@@ -19,3 +25,24 @@
     ]
     (else:)[(goto: "smartphone")]
 ]
+
+<style>
+
+#smartphone-container {
+    position: relative;
+    text-align: center;
+}
+
+#smartphone-container img {
+    width: 300px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+}
+
+</style>
