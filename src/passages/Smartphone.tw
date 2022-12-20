@@ -7,8 +7,8 @@
         <div class="centered">LOCKED</div>
     </div>
     
-    ($theItGuy:"The smartphone is locked. You might have some success by connecting to his old server first. I'll show you the way ... wait!", "guy1")
-    (live: 5s)[
+    ($theItGuy:"The smartphone is locked. You might have some success by connecting to my old server first. I'll show you the way ... wait!", "guy1")
+    (live: 10s)[
         (goto: "pc")
     ]
 ] (else:) [

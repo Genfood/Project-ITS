@@ -4,7 +4,7 @@
 <==
 ($printFileCounter:)
 
-###(font:'Courier New')[a fucking old and slow pc]
+###(font:'Courier New')[a very old and slow pc]
 {(set: $cdContent to (a:
     (dm: "name", "RSA_file.key", "content", "d=7085071307; n=7085811221"),
     (dm: "name", "RSA_file.enc", "content", "51191029 2221684278 1235109347 5932720573 5722816980 407222931 1597934719 6297126078 7002519417"),
@@ -23,7 +23,7 @@
 \]
 \(else-if: $usedItem's name is "CD") [\
     The CD looks pretty scratched...(show: ?cdContent)
-        ($theItGuy: "Try the open command on some of the files... retard...", "dudeOpenPromt")\
+        ($theItGuy: "Try the open command on some of the files...", "dudeOpenPromt")\
     ]\
 \(else: )[Nice idea, but you'd probably have similar success with a banana.]
 \]
