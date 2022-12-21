@@ -15,14 +15,14 @@
             (set: _hasPassage to _item's hasPassage)
             (set: _passage to _item's passage)
             * (link-rerun: _display)[ <!--maybe change this to the inventory item-->
-                (if: _isUsable)+(if: _lastPassage is "pc")[
+                (if: _hasPassage) [
+                    (goto: _passage)
+                ] (else if: _isUsable)+(if: _lastPassage is "pc")[
                     (dialog: [_description], "Go for it ...")
                     (set: $usedItem to _item)
                     (goto: _lastPassage)
                 ] (else-if: _isExternalLink) [
                     (open-url: _description)
-                ] (else-if: _hasPassage) [
-                    (goto: _passage)
                 ] (else:)[
                     (dialog: [_description], "Ahhhhhh ...")
                 ]    
