@@ -4,6 +4,8 @@
 <==
 ($printFileCounter:)
 
+$insertedItem
+
 ###(font:'Courier New')[a very old and slow pc]
 {(set: $cdContent to (a:
     (dm: "name", "RSA_file.key", "content", "d=7085071307; n=7085811221"),
@@ -27,7 +29,6 @@ The CD looks pretty scratched...(show: ?cdContent)
 ]\
 \(else: )[Nice idea, but you'd probably have similar success with a banana.]
 \]
-(set: $usedItem to 0)\
 
 <div id="pc-container">
     <img style="left: -130pt;" src="../images/pc.png"/>
