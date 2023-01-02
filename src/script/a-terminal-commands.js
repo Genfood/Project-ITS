@@ -147,7 +147,7 @@ function mount() {
         if (volume == "cd" || volume == "CD") {
             searchFor = "CD";
         } else if(volume == "usb" || volume == "USB") {
-            searchFor = "USB";
+            searchFor = "invUSB";
         } else {
             this.error("no such volume '" + volume + "' found");
             return;
