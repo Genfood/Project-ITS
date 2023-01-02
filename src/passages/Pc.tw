@@ -78,7 +78,7 @@ var term = $('.terminal-container').terminal({
         this.echo(' ls - List directory content');
         this.echo(' cat [file name] - Show file content');
         this.echo(' connect - Connect to your predecessor\'s server');
-        this.echo(' connect [Device] - you can easily mount a CD or a USB stick if you hav it in your inventory.');
+        this.echo(' mount [Device] - you can easily mount a CD or a USB stick if you hav it in your inventory.');
         this.echo(' verify rsa -m [Message] - you could verify if the message you decrypted is right.');
     },
     connect: connect(),
