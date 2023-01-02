@@ -66,7 +66,11 @@ function ls() {
                 });
                 break;
 
-            case "USB":
+            case "invUSB":
+                var cdContent = window.getHarloweVariable("$usbContent");
+                cdContent.forEach(element => {
+                    this.echo(element.get("name"));
+                });
                 break;
 
             default:
@@ -116,6 +120,16 @@ function cat() {
                     }
                 }
                 this.error("cat: " + file +": No such file or directory");
+                break;
+
+            case "invUSB":
+                var usbContent = window.getHarloweVariable("$usbContent");
+                for (let i = 0; i < usbContent.length; i++) {
+                    const f = usbContent[i];
+                    if (f.get("name") == file) {
+                        this.echo(f.get("content"));
+                    }
+                }
                 break;
 
             default:
