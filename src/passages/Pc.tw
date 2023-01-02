@@ -4,8 +4,6 @@
 <==
 ($printFileCounter:)
 
-$insertedItem
-
 ###(font:'Courier New')[a very old and slow pc]
 {(set: $cdContent to (a:
     (dm: "name", "RSA_file.key", "content", "d=7085071307; n=7085811221"),
