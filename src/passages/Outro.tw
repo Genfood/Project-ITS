@@ -3,14 +3,14 @@
 <div id="boss-container">
     <img class="column" src="../images/boss.png"/>
     <div class="column" id="text">
-        Good job, $name! You collected all the files we needed to resume normal operations.
+        (font:'Courier New')[Good job, $name! You collected all the files we needed to resume normal operations.
         You connected to the old server and used Diffie–Hellman for exchanging a shared secret,
         you also decrypted the old USB stick, which held valuable informations for out company.
-        You also found this old disc in the messy office of your predecessor.
-        Without you all these data would have been lost.
+        You also found this old disc in the messy office of your predecessor and learned about RSA.
+        Without you, all these data would have been lost.
 
 
-        You absolutely deserve a raise! 
+        You absolutely deserve a raise!]
     </div>
 </div>
 
