@@ -1,0 +1,19 @@
+:: folder [folder] {"position":"0,200"}
+(set: _lastPassage to (history:)'s last)\
+
+
+(font:'Courier New')[that´s part of a Rainbow Table]
+
+<div id="rainbow-container">
+        <img src="../images/rainbow.png"/>
+</div>
+
+<style>
+
+#rainbow-container {
+    max-width:100%;
+    max-height:100%;
+}
+</style>
+
+(button: "XX==")[(colour: white)[(font:'Courier New')[[Go back->office]]]]
