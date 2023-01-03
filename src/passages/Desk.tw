@@ -92,5 +92,6 @@
 
 
 </style>
+(if: visits < 2)[($theItGuy: "Gosh, what a mess, clean this please!", "dudeDeskJoke")]
 
 (button: "XX==")[(colour: white)[(font:'Courier New')[[back to office->office]]]]
