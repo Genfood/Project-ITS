@@ -14,7 +14,7 @@ No wonder John quit...]]
 (button: "XXX==")[(colour: white)[(font:'Courier New')[[change rooms and go to office->office]]]]
 (if: $fileCounter is 3)[(button: "XX==")[(colour: white)[(font:'Courier New')[[change rooms and go to boss office->outro]]]]]
 
-
+(if: visits < 2)[($theItGuy: "Yeah, I know the developers of this game could entirely dispense this room, without you noticing it.", "dudeLabFirstTime")]
 <script>
 window.onkeydown = null;
 </script>
