@@ -36,7 +36,7 @@ The CD looks pretty scratched...(show: ?cdContent)
 ]\
 \(else: )[Nice idea, but you'd probably have similar success with a banana.]
 \]
-
+(if: $inventory's length is 0)[($theItGuy: "Hey Boi, you should probbly first find something you could use with PC. Something like an USB stick, a CD or new monitor... this one is really old.", "dudeEmptyPromt")]
 <div id="pc-container">
     <img style="left: -130pt;" src="../images/pc.png"/>
     |terminalFiller)[<div class="terminal-container-filler"></div>]
