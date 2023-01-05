@@ -211,6 +211,9 @@ function connect () {
         this.read(`${user}@oldServer\'s password:`).then(async function(password) {
             console.log(typeof password);
             if(password === "Th!s!sS3CurEP455W0Rd") {
+
+                filecount = window.getHarloweVariable("$fileCounter");
+                window.setHarloweVariable("$fileCounter", filecount+1);
                 c.echo('Trying to connect to OLD-SERVER ...');
                 //await loading(this,25,200);
                 c.clear();

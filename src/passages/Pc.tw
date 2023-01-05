@@ -19,7 +19,8 @@
 
 <!--- Th!s!sS3CurEP455W0Rd  -->
 (set: $usbContent to (a:
-    (dm: "name", "server.password", "content", "5685e86694c3ea411f1c0815baeeba44")
+    (dm: "name", "server.md5", "content", "5685e86694c3ea411f1c0815baeeba44"),
+    (dm: "name", "README", "content", "MD5 is a hashing algorithm commonly used for storing passwords in databases. It's very secure!!!!!11!")
 ))
 
 (set: $path to "~/")
