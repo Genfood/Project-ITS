@@ -2,11 +2,11 @@
 ## (font:'Courier New')[Encrypt our Alien stuff!]
 #### (font:'Courier New')[Prologue]
 
-(box:"X", 15)[(font:'Courier New')[Hey $name, you are newly employed working in a super secret underground bunker lab operated by the U.S. goverment. your are the successor of John. John left the organisation due to his incompetence. Your department is taking care of reverse engineering (text-style:"underline")[Alien technology]. 
+(box:"X", 15)[(font:'Courier New')[Hey $name, you are newly employed working in a super secret underground bunker lab operated by the U.S. goverment. your are the successor of John. John left the organisation due to his incompetence. Your department is taking care of reverse engineering //Alien technology//. 
 
 Because of leaked UFO footage, your boss is going nuts and wants you to encrypt all data using suitable methods to prevent further leakages to the public. Until now, all of the organisation´s highly sensitive data has been stored unencrypted and your department is not allowed to hire an external encryption expert because of the top secret classification. Your tasks is to teach yourself in encryption and choose suitable methods to protect your department´s data against the public. 
 
-To prove your boss that you´re a pro in encryption, you have to collect (text-style:"underline")[3 hidden files]. Don´t show up at your boss´ office until you found them all!
+To prove your boss that you´re a pro in encryption, you have to collect //3 hidden files//. Don´t show up at your boss´ office until you found them all!
 
 John has been the only person in the secret lab that had an idea concerning computer stuff, so maybe he left something that could help you to find these files. 
 
