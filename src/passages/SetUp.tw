@@ -77,8 +77,8 @@
     (set: $invHashBook to (dm: "displayText", "How to hash important stuff like passwords", "name", "invHashBook", "description", "https://www.youtube.com/watch?v=r6GlzIWiMD0", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invMug to (dm: "displayText", "A useless coffee mug", "name", "invMug", "description", "a coffee mug with a slogan: If you call me nerd, I will call you an ambulance", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invPlayboy to (dm: "displayText", "Playboy issue #7 of 1986", "name", "invPlayboy", "description", "Guess, that won´t help you for now... ;)", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $invRifles to (dm: "displayText", "A magazine for rifles", "name", "invRifles","description", "What a bullsh*t!", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $invNature to (dm: "displayText", "A Nature Lifestlye magazin called 'Fish and Flesh'", "name", "invNature","description", "I doubt that John ever set foot in nature.", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invRifles to (dm: "displayText", "A magazine about rifles", "name", "invRifles","description", "What a bullsh*t!", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
+    (set: $invNature to (dm: "displayText", "A Nature Lifestlye magazin called 'Fish and Meat'", "name", "invNature","description", "I doubt that John ever set foot in nature.", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invEdgar to (dm: "displayText", "The Gold Bug by Edgar Allan Poe", "name", "invEdgar", "description", "Didn´t know that John was interested in that kind of literature...", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invPaper to (dm: "displayText", "bunch of papers collected from desk", "name", "invPaper", "description", "Most of the papers are blank, nothing interesting here", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invPaperclips to (dm: "displayText", "paper clips collected from desk", "name", "invPaperclips", "description", "You´re not James Bond... don´t even try opening something with it", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
@@ -86,14 +86,7 @@
     (set: $invPens to (dm: "displayText", "coloured pens collected from desk", "name", "invPens", "description", "what do you wanna do? draw a nice picture or what?", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invCan to (dm: "displayText", "rusty can", "name", "invCan", "description", "a rusty can, wow", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invFolder to (dm: "displayText", "folder containing Rainbow Table", "name", "invFolder", "description", "the folder contains a Rainbow Table", "isExternalLink", false, "isUsable", true, "hasPassage", true, "passage", "folder"))
-
-
     (set: $book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $book2 to (dm: "displayText", "Buch Nummer 2", "name", "book2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-
 }
 
 <!--Challenges solved vars:-->
