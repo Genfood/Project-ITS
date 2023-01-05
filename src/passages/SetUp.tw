@@ -86,14 +86,7 @@
     (set: $invPens to (dm: "displayText", "coloured pens collected from desk", "name", "invPens", "description", "what do you wanna do? draw a nice picture or what?", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invCan to (dm: "displayText", "rusty can", "name", "invCan", "description", "a rusty can, wow", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invFolder to (dm: "displayText", "folder containing Rainbow Table", "name", "invFolder", "description", "the folder contains a Rainbow Table", "isExternalLink", false, "isUsable", true, "hasPassage", true, "passage", "folder"))
-
-
     (set: $book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $book2 to (dm: "displayText", "Buch Nummer 2", "name", "book2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $note2 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note2", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $note3 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note3", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $note4 to (dm: "displayText", "noch ein zerknüllter Zettel", "name", "note4", "description", "", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-
 }
 
 <!--Challenges solved vars:-->
