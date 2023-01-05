@@ -1,5 +1,5 @@
 :: prologue [prologue] {"position":"0,0"}
-## (font:'Courier New')[Encrypt our Alien stuff!]
+### (font:'Courier New')[Encrypt our Alien stuff!]
 #### (font:'Courier New')[Prologue]
 
 (box:"X", 15)[(font:'Courier New')[Hey $name, you are newly employed working in a super secret underground bunker lab operated by the U.S. goverment. your are the successor of John. John left the organisation due to his incompetence. Your department is taking care of reverse engineering //Alien technology//. 
