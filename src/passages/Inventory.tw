@@ -17,7 +17,7 @@
             * (link-rerun: _display)[ <!--maybe change this to the inventory item-->
                 (if: _hasPassage) [
                     (goto: _passage)
-                ] (else if: _isUsable)+(if: _lastPassage is "pc")[
+                ] (else-if: _isUsable)+(if: _lastPassage is "pc")[
                     (dialog: [_description], "Go for it ...")
                     (set: $usedItem to _item)
                     (goto: _lastPassage)
