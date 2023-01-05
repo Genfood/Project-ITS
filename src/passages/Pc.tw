@@ -38,7 +38,7 @@ The CD looks pretty scratched...(show: ?cdContent)
 \]
 (if: $inventory's length is 0)[($theItGuy: "Hey Boi, you should probbly first find something you could use with PC. Something like an USB stick, a CD or new monitor... this one is really old.", "dudeEmptyPromt")]
 <div id="pc-container">
-    <img style="left: -130pt;" src="../images/pc.png"/>
+    <img style="left: -130pt;" src="../images/pc.png" height="900pt"/>
     |terminalFiller)[<div class="terminal-container-filler"></div>]
     |terminal>[<div class="terminal-container"></div>]
     |powerButton>[<div id="power"></dic>]
@@ -133,17 +133,17 @@ math {
 
 }
 .terminal-container-filler{
-    height: 271pt;
-    width: 364pt;
-    top: -467pt;
-    left: 63pt;
+    height: 242pt;
+    width: 317pt;
+    top: -621pt;
+    left: 111pt;
 }
 .terminal-container {
-    height: 271pt;
+    height: 242pt;
     overflow-y: scroll;
-    width: 364pt;
-    top: -467pt;
-    left: 63pt;
+    width: 317pt;
+    top: -621pt;
+    left: 111pt;
     border-radius: 11pt;
 }
 #filler {
@@ -155,8 +155,8 @@ math {
     height: 30pt;
     width: 30pt;
     position: absolute;
-    top: -387pt;
-    left: 370pt;
+    top: -512pt;
+    left: 112pt;
 }
 
 .hide {
