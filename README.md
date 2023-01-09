@@ -1,6 +1,10 @@
 # Project-ITS
 
+The game is getting published automatically on GitHub Pages. Click [here](https://genfood.github.io/Project-ITS/out/) to play the game! 😏
+
 ## Getting started
+
+You can also compile the game by yourself:
 
 1. Download [Tweego](https://www.motoslave.net/tweego/)
 2. Overide `[Tweego folder]/storyformats/harlowe-3/format.js` with [format.js](./format.js)
