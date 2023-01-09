@@ -34,7 +34,9 @@ jobs:
         run: |
           cd ./tools/tweego
           pwd
-          ./tweego ../../src -o ../../index.html
+          ./tweego ../../src -o ../../out/index.html
+          cd ../../
+          cp images/* out/
           
       - name: Setup Pages
         uses: actions/configure-pages@v2
