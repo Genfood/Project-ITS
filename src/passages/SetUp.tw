@@ -9,6 +9,23 @@
 
 
 <!--macro set up here:-->
+<!--XSS prevention-->
+(set: $xssMagic to (macro: str-type _input, [
+    (set: _map to (a:
+        (a: "&", "&amp;"),
+        (a: "<", "&lt;"),
+        (a: ">", "&gt;"),
+        (a: '"', "&quot;"),
+        (a: "'", "&#x27;"),
+        (a: "/", "&#x2F;"))
+    )
+    (for: each _item, ..._map)[
+        (set: _input to (str-replaced: _item's 1st, _item's 2nd, _input))
+    ]
+    
+    (output-data: _input)
+]))
+
 <!--Print file counter-->
 (set: $printFileCounter to (macro:[
     (output:)[{
@@ -105,10 +122,10 @@ All encryption techniques and algorithms shown in this game are for (text-style:
 and aim to give an exemplary introduction into the field of cryptography. Please consider this, if you want to apply cryptography techniques in your private or professional environment.
 ]], "Got it.")
 
-
 (live: 50ms)[
     <!--Put all set up user questions here:-->
-    (set: $name to (prompt: "Hey player, enter your name:", ""))
+    (set: $name to (prompt: "Hey player, enter your name:", "",""))
+    (set: $name to ($xssMagic: $name))
     <!--Check if inputs are valid...-->
     (unless: $name is "")[
         (stop:)
