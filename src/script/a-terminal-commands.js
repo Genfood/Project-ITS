@@ -210,8 +210,7 @@ function connect () {
             console.log(typeof password);
             if(password === "Th!s!sS3CurEP455W0Rd") {
 
-                filecount = window.getHarloweVariable("$fileCounter");
-                window.setHarloweVariable("$fileCounter", filecount+1);
+                window.setHarloweVariable("$isHashChallengeSolved", true);
                 c.echo('Trying to connect to OLD-SERVER ...');
                 //await loading(this,25,200);
                 c.clear();

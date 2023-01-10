@@ -14,7 +14,7 @@
 ] (else:) [
     (set: _code to (prompt: "Shit! The smartphone is still locked and is asking for a secret PIN. What was the shared secret again?", ""))\
     (if:_code is (text:$dhSharedSecret))[
-        (set: $fileCounter to it + 1)
+        (set: $isDHChallengeSolved to true)
 
         Great! You unlocked the phone and got access to all the old mails of your predecessor.
         You also found a backup file containing all the emails and SMS. You can show this to your boss when you found all the missing files!
