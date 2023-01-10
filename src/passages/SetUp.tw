@@ -11,9 +11,11 @@
 <!--macro set up here:-->
 <!--Macro to calc the file counter-->
 (set: $calcFileCounter to (macro: [
-    (if: $isCDChallengeSolved) [(set: $fileCounter to it + 1)]
-    (if: $isDHChallengeSolved) [(set: $fileCounter to it + 1)]
-    (if: $isHashChallengeSolved) [(set: $fileCounter to it + 1)]
+    (set: _c to 0)
+    (if: $isCDChallengeSolved) [(set: _c to it + 1)]
+    (if: $isDHChallengeSolved) [(set: _c to it + 1)]
+    (if: $isHashChallengeSolved) [(set: _c to it + 1)]
+    (output-data: _c)
 ]))
 
 <!--XSS prevention-->
@@ -35,9 +37,8 @@
 
 <!--Print file counter-->
 (set: $printFileCounter to (macro:[
-    ($calcFileCounter:)
     (output:)[{
-        (opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: (live: 50ms)[$fileCounter / 3]]]]
+        (opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: (live: 50ms)[(set: $fileCounter to ($calcFileCounter:))$fileCounter / 3]]]]
     }]
 ]))
 
