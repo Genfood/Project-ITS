@@ -9,6 +9,13 @@
 
 
 <!--macro set up here:-->
+<!--Macro to calc the file counter-->
+(set: $calcFileCounter to (macro: [
+    (if: $isCDChallengeSolved) [(set: $fileCounter to it + 1)]
+    (if: $isDHChallengeSolved) [(set: $fileCounter to it + 1)]
+    (if: $isHashChallengeSolved) [(set: $fileCounter to it + 1)]
+]))
+
 <!--XSS prevention-->
 (set: $xssMagic to (macro: str-type _input, [
     (set: _map to (a:
@@ -28,6 +35,7 @@
 
 <!--Print file counter-->
 (set: $printFileCounter to (macro:[
+    ($calcFileCounter:)
     (output:)[{
         (opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: (live: 50ms)[$fileCounter / 3]]]]
     }]
@@ -109,6 +117,8 @@
 <!--Challenges solved vars:-->
 (set: $fileCounter to 0)
 (set: $isCDChallengeSolved to false)
+(set: $isDHChallengeSolved to false)
+(set: $isHashChallengeSolved to false)
 
 <!-- DEBUG ONLY
 (set: $inventory to it + (a: $cd))
