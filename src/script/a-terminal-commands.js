@@ -100,11 +100,9 @@ function cat() {
                             let console = this;
                             this.read("The file is encrypted, pls enter the password:").then(async function(inp) {
                                 if(f.get("key") == inp) {
-                                    let challengeCounter = window.getHarloweVariable("$fileCounter");
                                     let isCDChallengeSolved = window.getHarloweVariable("$isCDChallengeSolved");
                                     // in case the player has encrypted file "file" 
                                     if (file == "file" && !isCDChallengeSolved) {
-                                        window.setHarloweVariable("$fileCounter", (challengeCounter + 1));
                                         window.setHarloweVariable("$isCDChallengeSolved", true);
                                     }
                                     console.echo(f.get("content"));
