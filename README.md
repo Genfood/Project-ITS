@@ -19,7 +19,7 @@ To just compile the current project with Tweego, do the follwig steps in the com
 5. Run `tweego -o ./out/story.html ./src`
 6. The compiled story can be found in the `out` directory
 
-### in VisualStudio Code
+### VisualStudio Code
 
 #### requirements
 
