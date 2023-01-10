@@ -58,6 +58,12 @@ The CD looks pretty scratched...(show: ?cdContent)
     ]</div>
 }
 <div id="filler" />
+
+
+
+
+
+
 (font:'Courier New')[You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.]
 (set: $insertedItem to $usedItem)
 {
