@@ -1,6 +1,7 @@
 # Project-ITS
 
-The game is getting published automatically on GitHub Pages. Click [here](https://genfood.github.io/Project-ITS/out/) to play the game! 😏
+The game is getting published automatically on GitHub Pages. Click [here](https://genfood.github.io/Project-ITS/out/) to play the game! 😏  
+Best playable using Firefox. 🔥🦊
 
 ## Getting started
 
@@ -30,3 +31,7 @@ To just compile the current project with Tweego, do the follwig steps in the com
 
 4. Open the directory of this git in VisualStudio Code
 5. The project can now be compiled in normal or debug mode, in VisualStudio Code. Just press `F5` or use the `Run and Debug` Tab.  
+
+## Known Bugs
+
+- Using Chrome or Safari can cause a problems clicking on collectable items. Clicking several times is a solution, or use Firefox. 🤡
