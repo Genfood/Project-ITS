@@ -15,7 +15,7 @@ You can also compile the game by yourself:
 To just compile the current project with Tweego, do the follwig steps in the commandline:
 
 4. Go to the project directory
-5. Run `tweego -o .out/story.html ./src`
+5. Run `tweego -o ./out/story.html ./src`
 6. The compiled story can be found in the `out` directory
 
 ### in VisualStudio Code
