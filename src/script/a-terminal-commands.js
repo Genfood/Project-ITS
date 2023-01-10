@@ -235,7 +235,7 @@ function connect () {
 
 
                 c.echo("\n\n")
-                await this.c('I picked '+ p + ' as our prime number and ' + g + ' as our natural number. Don\'t forget these!', {typing: true, delay: 100 });
+                await c.echo('I picked '+ p + ' as our prime number and ' + g + ' as our natural number. Don\'t forget these!', {typing: true, delay: 100 });
                 c.echo("\n\n")
                 await c.echo('Now, try to think about a number smaller than ' + p + ". Let's call it u! Keep this number to yourself and don't tell anyone!", {typing: true, delay: 100 });
                 await c.echo('I need you to find a pen and paper now and calculate the following term.', {typing: true, delay: 100 });
