@@ -111,7 +111,7 @@
     (set: $invScissors to (dm: "displayText", "scissors collected from desk", "name", "invScissors", "description", "cool scissors", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invPens to (dm: "displayText", "coloured pens collected from desk", "name", "invPens", "description", "what do you wanna do? draw a nice picture or what?", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invCan to (dm: "displayText", "rusty can", "name", "invCan", "description", "a rusty can, wow", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
-    (set: $invFolder to (dm: "displayText", "folder containing Rainbow Table", "name", "invFolder", "description", "the folder contains a Rainbow Table", "isExternalLink", false, "isUsable", true, "hasPassage", true, "passage", "folder"))
+    (set: $invFolder to (dm: "displayText", "folder containing MD5 Rainbow Table", "name", "invFolder", "description", "the folder contains a MD5 Rainbow Table", "isExternalLink", false, "isUsable", true, "hasPassage", true, "passage", "folder"))
     (set: $book1 to (dm: "displayText", "RSA for dummies", "name", "book1", "description", "https://simple.wikipedia.org/wiki/RSA_algorithm", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
 }
 

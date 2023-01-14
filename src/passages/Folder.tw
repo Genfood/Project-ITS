@@ -2,7 +2,7 @@
 (set: _lastPassage to (history:)'s last)\
 
 
-(font:'Courier New')[that´s part of a Rainbow Table]
+(font:'Courier New')[that´s part of a MD5 Rainbow Table]
 
 <div id="rainbow-container">
         <img src="../images/rainbow.png"/>
