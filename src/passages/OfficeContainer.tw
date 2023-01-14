@@ -1,6 +1,7 @@
 :: officeContainer [officeContainer] {"position":"0,400"}
 (unless: $officeContainerIsUnlocked)[\
     (set: _code to (prompt: "Enter code to unlock container:", ""))\
+    (set: _code to ($xssMagic: _code)) \
     (if:_code is "helloworld")[(set: $officeContainerIsUnlocked to true)]\
     (else:)[
     (dialog: [(font:'Courier New')[Wrong password :( 
