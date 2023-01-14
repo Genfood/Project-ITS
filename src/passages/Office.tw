@@ -4,7 +4,7 @@
 <==
 ($printFileCounter:)
 
-###(text-style:"underline")[(font:'Courier New')[Old office of John]]
+###(font:'Courier New')[//Old office of John//]
 (font:'Courier New')[The smell of your predecessor is still in the air...
 The room is cold and totally empty beside of:]
 

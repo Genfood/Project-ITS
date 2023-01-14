@@ -4,7 +4,7 @@
 <==
 ($printFileCounter:)
 
-###(text-style:"underline")[(font:'Courier New')[Old computer lab]]
+###(font:'Courier New')[//Old computer lab//]
 
 (box:"X", 5)[(font:'Courier New')[''Oh wow, that´s not a lab... that´s just a depressing room with one PC in it. 
 No wonder John quit...'']]
