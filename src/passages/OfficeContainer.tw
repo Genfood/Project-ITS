@@ -28,6 +28,6 @@ $officeContainerIsUnlocked[\
 ]
 
 
-(if: visits > 2)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy1")(hide: ?guy1)]\
-(if: visits > 2)[($theItGuy:"Not everything in my container will be of use to you, but I would try to use some gadgets with my old PC in the lab.", "guy2")]
+(if: visits > 0)[($theItGuy:"I would try to use some gadgets with my old PC in the lab.", "guy1")(hide: ?guy1)]\
+(if: visits > 0)[($theItGuy:"I would try to use some gadgets with my old PC in the lab.", "guy2")]
 (button: "XX==")[(colour: white)[(font:'Courier New')[[back to the office->office]]]]
