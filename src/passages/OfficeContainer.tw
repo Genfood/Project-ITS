@@ -2,7 +2,11 @@
 (unless: $officeContainerIsUnlocked)[\
     (set: _code to (prompt: "Enter code to unlock container:", ""))\
     (if:_code is "helloworld")[(set: $officeContainerIsUnlocked to true)]\
-    (else:)[(goto: "office")]\
+    (else:)[
+    (dialog: [(font:'Courier New')[Wrong password :( 
+        maybe you can find a hint on the desk]], "Back to office")
+    (goto: "office")
+    ]\
 ]\
 ==>
 (button: "==X")[(colour: white)[(font:'Courier New')[[inventory->inventory]]]]
