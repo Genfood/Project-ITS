@@ -127,7 +127,7 @@ All encryption techniques and algorithms shown in this game are for //entertaime
 and aim to give an exemplary introduction into the field of cryptography. Please consider this, if you want to apply cryptography techniques in your private or professional environment.
 ]], "Got it.")
 
-(live: 50ms)[
+(live: 2000ms)[
     <!--Put all set up user questions here:-->
     (set: $name to (prompt: "Hey player, enter your name:", "",""))
     (set: $name to ($xssMagic: $name))
