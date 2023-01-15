@@ -107,6 +107,7 @@ rsaExample();
 
 <details><summary>9. Write a script or prgram to get the decrypted message</summary>
 <p>
+  
   This is just an example of how to solve. [A running version of the script below, can be found on StackBlitz.](https://stackblitz.com/edit/js-25tea6?file=index.js)
 
 ```javascript
@@ -123,3 +124,6 @@ OTPExample();
 
 </p>
 </details>
+
+10. Type `cat file` and use the decimal message as password
+11. congrats you solved this challenge, the file counter should now be increased
