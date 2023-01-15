@@ -32,6 +32,16 @@ To just compile the current project with Tweego, do the follwig steps in the com
 4. Open the directory of this git in VisualStudio Code
 5. The project can now be compiled in normal or debug mode, in VisualStudio Code. Just press `F5` or use the `Run and Debug` Tab.  
 
+## How to solve the game
+
+<details><summary>Show</summary>
+<p>
+
+[Blue-Print](blue-print.md)
+
+</p>
+</details>
+
 ## Known Bugs
 
 - Using Chrome or Safari can cause a problems clicking on collectable items. Clicking several times is a solution, or use Firefox. 🤡

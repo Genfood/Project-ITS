@@ -2,15 +2,30 @@
 ### (font:'Courier New')[Encrypt our Alien stuff!]
 #### (font:'Courier New')[Prologue]
 
-(box:"X", 15)[(font:'Courier New')[Hey $name, you are newly employed working in a super secret underground bunker lab operated by the U.S. goverment. your are the successor of John. John left the organisation due to his incompetence. Your department is taking care of reverse engineering //Alien technology//. 
-
-Because of leaked UFO footage, your boss is going nuts and wants you to encrypt all data using suitable methods to prevent further leakages to the public. Until now, all of the organisation´s highly sensitive data has been stored unencrypted and your department is not allowed to hire an external encryption expert because of the top secret classification. Your tasks is to teach yourself in encryption and choose suitable methods to protect your department´s data against the public. 
+(box:"X", 15)[(font:'Courier New')[''Hey $name, you are newly employed working in a super secret underground bunker lab \
+operated by the U.S. goverment. your are the successor of John. John left the organisation due to his incompetence. \
+Your department is taking care of reverse engineering //Alien technology//. \
+Because of leaked UFO footage, your boss is going nuts and wants you to encrypt all data \
+using suitable methods to prevent further leakages to the public. Until now, all of the organisation´s \
+highly sensitive data has been stored unencrypted and your department is not allowed to hire an external \
+encryption expert because of the top secret classification. Your tasks is to teach yourself in encryption \
+and choose suitable methods to protect your department´s data against the public.
 
 To prove your boss that you´re a pro in encryption, you have to collect //3 hidden files//. Don´t show up at your boss´ office until you found them all!
+During your journey you will be confronted with the following topics:
+* Caesar-Chiffre encryption (easy)
+* MD5 hashed passwords (easy)
+* Diffie-Hellmann algorithm (medium)
+* RSA encryption (hard) 
 
-John has been the only person in the secret lab that had an idea concerning computer stuff, so maybe he left something that could help you to find these files. 
+If you want to successfully master all challenges and find the //3 hidden files// it is expected that you do calculations \
+"outside" the game. Meaning go and equip yourself with pen & paper and you may update your favorite IDE :). In case you´re \
+in a hurry and struggling with the RSA challenge, no worries, there will be a guided solution for this placed in the game. \
+You will gain access to the RSA solution after you solved the other challenges. 
 
-You could start with checking out either John´s office or the old computer lab John regularly visited.]]
+John has been the only person in the secret lab that had an idea concerning nerdy IT stuff, so maybe he left something that could help you to find these files. 
+
+You could start with checking out either John´s office or the old computer lab John regularly visited.'']]
 
 (opacity: 0.75)[($theItGuy:"By the way, $name: I´m your imagination of John, I will help you in case your stuck. No worries!", "guyPrologue")]
 (button:)[(colour: white)[(font:'Courier New')[[go to office->office]]]]

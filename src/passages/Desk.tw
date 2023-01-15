@@ -90,7 +90,7 @@
     max-height: 90%;
 }
 </style>
-(if: visits < 2)[($theItGuy: "Ahh shit, I knew I forgot, an important note there... just ignore it.", "dudeDeskJoke2")]
-(if: visits < 2)[($theItGuy: "Gosh, what a mess, clean this please!", "dudeDeskJoke")]
+
+($theItGuy: "Gosh, what a mess, clean this please! You can ignore the important note, nothing to see there...", "dudeDeskJoke")
 
 (button: "XX==")[(colour: white)[(font:'Courier New')[[back to office->office]]]]

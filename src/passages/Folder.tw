@@ -1,8 +1,7 @@
 :: folder [folder] {"position":"0,200"}
 (set: _lastPassage to (history:)'s last)\
 
-
-(font:'Courier New')[that´s part of a Rainbow Table]
+(font:'Courier New')[that´s part of a MD5 Rainbow Table]
 
 <div id="rainbow-container">
         <img src="../images/rainbow.png"/>
@@ -16,4 +15,4 @@
 }
 </style>
 
-(button: "XX==")[(colour: white)[(font:'Courier New')[[Go back->office]]]]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[Go back->_lastPassage]]]]

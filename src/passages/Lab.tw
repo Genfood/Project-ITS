@@ -4,14 +4,15 @@
 <==
 ($printFileCounter:)
 
-###(text-style:"underline")[(font:'Courier New')[Old computer lab]]
+###(font:'Courier New')[//Old computer lab//]
 
-(box:"X", 5)[(font:'Courier New')[Oh wow, that´s not a lab... that´s just a depressing room with one PC in it. 
-No wonder John quit...]]
+(box:"X", 5)[(font:'Courier New')[''Oh wow, that´s not a lab... that´s just a depressing room with one PC in it. 
+No wonder John quit...'']]
 
 (button: "X")[(colour: white)[(font:'Courier New')[[take a closer look at the pc->pc]]]]
 
 (button: "XXX==")[(colour: white)[(font:'Courier New')[[change rooms and go to office->office]]]]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[go to Prologue->prologue]]]]
 (if: $fileCounter is 3)[(button: "XX==")[(colour: white)[(font:'Courier New')[[change rooms and go to boss office->outro]]]]]
 
 (if: visits < 2)[($theItGuy: "Yeah, I know the developers of this game could entirely dispense this room, without you noticing it.", "dudeLabFirstTime")]
