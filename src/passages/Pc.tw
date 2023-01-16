@@ -64,7 +64,10 @@ The CD looks pretty scratched...(show: ?cdContent)
 
 
 
+
+
 (font:'Courier New')[You are sitting in front of a really old looking PC, it smells slithly, but you keep ignoring it.]
+(button: "XX==")[(colour: white)[(font:'Courier New')[[back to the lab->lab]]]]
 (set: $insertedItem to $usedItem)
 {
 [<div class="bubble bubble-bottom-left" contenteditable>Yo dude I don't remember exactly where I left it, but you need a USB stick.</div>
@@ -171,4 +174,3 @@ math {
 }
 
 </style>
-(button: "XX==")[(colour: white)[(font:'Courier New')[[back to the lab->lab]]]]
