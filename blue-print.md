@@ -15,11 +15,31 @@
 7. enter password at office container
 8. you now have access to the office container and collect the items stored there
 
+## Solve USB-stick / MD5-Hash challenge
+
+### Requirements
+- solve container / Caeser-Chiffre challenge
+- have the USB-stick from the drawer in the inventory
+
+### Steps to solve
+1. go to office
+2. go to desk
+3. collect folder containing rainbow table with some MD5 hashes
+4. go to lab
+5. go to PC
+6. type `mount USB` or go to the inventory a click on the USB stick to insert it into the PC
+7. type `ls` to see the content of the USB stick
+8. use `cat` to see content of `README` and `server.md5`
+9. note down the hash value you find in `server.md5`
+10. open the rainbow table you found and note down the correct plain text password using the hash value
+11. go to PC, use the `connect` command and type in the password you noted
+12. you solved the MD5 challenge and the file counter will increase
+
 ## Solve CD / RSA challenge
 
 ### Requirements
 
-- solve container challenge
+- solve container container / Caeser-Chiffre challenge
 - have the CD from the drawer in the inventory
 
 ### Steps to solve
