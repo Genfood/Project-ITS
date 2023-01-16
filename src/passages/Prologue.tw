@@ -3,7 +3,7 @@
 #### (font:'Courier New')[Prologue]
 
 (box:"X", 15)[(font:'Courier New')[''Hey $name, you are newly employed working in a super secret underground bunker lab \
-operated by the U.S. goverment. your are the successor of John. John left the organisation due to his incompetence. \
+operated by the U.S. goverment. You are the successor of John. John left the organisation due to his incompetence. \
 Your department is taking care of reverse engineering //Alien technology//. \
 Because of leaked UFO footage, your boss is going nuts and wants you to encrypt all data \
 using suitable methods to prevent further leakages to the public. Until now, all of the organisation´s \
@@ -20,8 +20,8 @@ During your journey you will be confronted with the following topics:
 
 If you want to successfully master all challenges and find the //3 hidden files// it is expected that you do calculations \
 "outside" the game. Meaning go and equip yourself with pen & paper and you may update your favorite IDE :). In case you´re \
-in a hurry and struggling with the RSA challenge, no worries, there will be a guided solution for this placed in the game. \
-You will gain access to the RSA solution after you solved the other challenges. 
+in a hurry and struggling with the RSA or any other challenge, no worries, there is a guided solution for this placed in \
+the GitHub repository. To have a look, open the file you find under "How to solve the game". 
 
 John has been the only person in the secret lab that had an idea concerning nerdy IT stuff, so maybe he left something that could help you to find these files. 
 
