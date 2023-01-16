@@ -28,7 +28,7 @@
 <!--The variable '$usedItem' contains the item the user clicked on. Set it always to  0, if you dont use it, to avoid missunderstandings in other passages. -->
 (unless: $usedItem is 0)[\
 (set: $path to "~/"+$usedItem's name)
-\(if: $usedItem's name is  is "USB Stick") [\
+\(if: $usedItem's name is "USB-Stick") [\
 \You fiddle around with the USB stick on the PC case. After you have turned the stick three times, it finally fits in.
 \]
 \(else-if: $usedItem's name is "CD") [\
