@@ -33,7 +33,8 @@
 \]
 \(else-if: $usedItem's name is "CD") [\
 The CD looks pretty scratched...(show: ?cdContent)
-    ($theItGuy: "Try the open command on some of the files... retard...", "dudeOpenPromt")\
+    ($theItGuy: "Try the cat command on some of the files... retard...", "dudeOpenPromt")\
+    ($theItGuy:"I would start with the RSA file.key, it could be helpful to decrypt the content of RSA file.enc. Also check the .info files. Type ls to list all files.", "guy-cd-2")\
 ]\
 \(else: )[Nice idea, but you'd probably have similar success with a banana.]
 \]
@@ -95,7 +96,7 @@ var term = $('.terminal-container').terminal({
         this.echo(' ls - List directory content');
         this.echo(' cat [file name] - Show file content');
         this.echo(' connect - Connect to your predecessor\'s server');
-        this.echo(' mount [Device] - you can easily mount a CD or a USB stick if you hav it in your inventory.');
+        this.echo(' mount [Device] - Mount a device from your inventory');
         this.echo(' verify rsa -m [Message] - you could verify if the message you decrypted is right.');
     },
     connect: connect(),
