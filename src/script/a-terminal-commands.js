@@ -66,7 +66,7 @@ function ls() {
                 });
                 break;
 
-            case "invUSB":
+            case "USB-Stick":
                 var cdContent = window.getHarloweVariable("$usbContent");
                 cdContent.forEach(element => {
                     this.echo(element.get("name"));
@@ -120,7 +120,7 @@ function cat() {
                 this.error("cat: " + file +": No such file or directory");
                 break;
 
-            case "invUSB":
+            case "USB-Stick":
                 var usbContent = window.getHarloweVariable("$usbContent");
                 for (let i = 0; i < usbContent.length; i++) {
                     const f = usbContent[i];
@@ -144,8 +144,8 @@ function mount() {
         var searchFor = "";
         if (volume == "cd" || volume == "CD") {
             searchFor = "CD";
-        } else if(volume == "usb" || volume == "USB") {
-            searchFor = "invUSB";
+        } else if(volume.includes("usb") || volume.includes("USB")) {
+            searchFor = "USB-Stick";
         } else {
             this.error("no such volume '" + volume + "' found");
             return;
