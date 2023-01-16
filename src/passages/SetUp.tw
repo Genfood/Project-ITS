@@ -38,7 +38,7 @@
 <!--Print file counter-->
 (set: $printFileCounter to (macro:[
     (output:)[{
-        (opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: (live: 50ms)[(set: $fileCounter to ($calcFileCounter:))$fileCounter / 3]]]]
+        (opacity: 0.55)[(float-box: "X======","Y======")[(font:'Courier New')[files found: (live: 2000ms)[(set: $fileCounter to ($calcFileCounter:))$fileCounter / 3]]]]
     }]
 ]))
 
@@ -127,7 +127,7 @@ All encryption techniques and algorithms shown in this game are for //entertaime
 and aim to give an exemplary introduction into the field of cryptography. Please consider this, if you want to apply cryptography techniques in your private or professional environment.
 ]], "Got it.")
 
-(live: 2000ms)[
+(live: 200ms)[
     <!--Put all set up user questions here:-->
     (set: $name to (prompt: "Hey player, enter your name:", "",""))
     (set: $name to ($xssMagic: $name))
