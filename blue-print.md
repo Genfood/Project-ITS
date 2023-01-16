@@ -1,10 +1,58 @@
 # Blue Print
 
-## Solve CD challenge
+## Solve Container / Caesar-Chiffre challenge
+
+### Requirements
+- none
+
+### Steps to solve
+1. go to office
+2. go to desk
+3. collect important note containing a password, encrypted with Caeser-Chiffre with a shift of 5
+4. go to book shelf
+5. collect book about Caeser-Chiffre to learn about it
+6. decrypt the password in the note and write it down somewhere
+7. enter password at office container
+8. you now have access to the office container and collect the items stored there
+
+## Solve USB-stick / MD5-Hash challenge
+
+### Requirements
+- solve container / Caeser-Chiffre challenge
+- have the USB-stick from the drawer in the inventory
+
+### Steps to solve
+1. go to office
+2. go to desk
+3. collect folder containing rainbow table with some MD5 hashes
+4. go to lab
+5. go to PC
+6. type `mount USB` or go to the inventory a click on the USB stick to insert it into the PC
+7. type `ls` to see the content of the USB stick
+8. use `cat` to see content of `README` and `server.md5`
+9. note down the hash value you find in `server.md5`
+10. open the rainbow table you found and note down the correct plain text password using the hash value
+
+## Solve Server / Diffie-Hellman-Keyexchange
+
+### Requirement
+- obtain smartphone from the container
+- finished MD5-Hash challenge
+
+1. Go to PC
+2. Execute `connect`
+3. Use the password obtained by the rainbow table (MD5-Hash challenge)
+4. Filecounter increases for solving MD5
+5. Text guides through the Diffie-Hellman key exchange
+6. Note down the calculated shared secret
+7. Use the shared secret as a PIN for the smartphone
+8. Filecounter increases for solving the Diffie-Hellman challenge
+
+## Solve CD / RSA challenge
 
 ### Requirements
 
-- solve container challenge
+- solve container container / Caeser-Chiffre challenge
 - have the CD from the drawer in the inventory
 
 ### Steps to solve
