@@ -1,6 +1,21 @@
 # Blue Print
 
-## Solve CD challenge
+## Solve Container / Caesar-Chiffre challenge
+
+### Requirements
+- none
+
+### Steps to solve
+1. go to office
+2. go to desk
+3. collect important note containing a password, encrypted with Caeser-Chiffre with a shift of 5
+4. go to book shelf
+5. collect book about Caeser-Chiffre to learn about it
+6. decrypt the password in the note and write it down somewhere
+7. enter password at office container
+8. you now have access to the office container and collect the items stored there
+
+## Solve CD / RSA challenge
 
 ### Requirements
 
