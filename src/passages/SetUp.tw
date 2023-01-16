@@ -95,7 +95,7 @@
 <!--define inventory items here, it is not a must, but could be handy in some cases.-->
 {
     (set: $cd to (dm: "displayText", "a scratched CD (I wonder if it still works?)", "name", "CD", "description", "Purely from the appearance, the CD seems to be no longer functional", "isExternalLink", false, "isUsable", true, "hasPassage", false, "passage", ""))
-    (set: $invUSB to (dm: "displayText", "dusty USB stick", "name", "invUSB", "description", "Maybe I can use it in the Lab", "isExternalLink", false, "isUsable", true, "hasPassage", false, "passage", ""))
+    (set: $invUSB to (dm: "displayText", "dusty USB stick", "name", "USB-Stick", "description", "Maybe I can use it in the Lab", "isExternalLink", false, "isUsable", true, "hasPassage", false, "passage", ""))
     (set: $invSmartphone to (dm: "displayText", "John´s old smartphone", "name", "invSmartphone", "description", "I guess John should have dropped this at the IT department", "isExternalLink", false, "isUsable", true, "hasPassage", true, "passage", "smartphone"))
     (set: $invNoteCaeserCipher to (dm: "displayText", "an important note collected from the desk", "name", "noteImportant", "description", "mjqqtbtwqi use CC 5", "isExternalLink", false, "isUsable", false, "hasPassage", false, "passage", ""))
     (set: $invCeaserCipherBook to (dm: "displayText", "Caeser-Chiffre: A simpler guide to the simplest encryption ever", "name", "invCeaserCipherBook", "description", "https://brilliant.org/wiki/caesar-cipher/", "isExternalLink", true, "isUsable", false, "hasPassage", false, "passage", ""))
