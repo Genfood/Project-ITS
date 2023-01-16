@@ -32,8 +32,21 @@
 8. use `cat` to see content of `README` and `server.md5`
 9. note down the hash value you find in `server.md5`
 10. open the rainbow table you found and note down the correct plain text password using the hash value
-11. go to PC, use the `connect` command and type in the password you noted
-12. you solved the MD5 challenge and the file counter will increase
+
+## Solve Server / Diffie-Hellman-Keyexchange
+
+### Requirement
+- obtain smartphone from the container
+- finished MD5-Hash challenge
+
+1. Go to PC
+2. Execute `connect`
+3. Use the password obtained by the rainbow table (MD5-Hash challenge)
+4. Filecounter increases for solving MD5
+5. Text guides through the Diffie-Hellman key exchange
+6. Note down the calculated shared secret
+7. Use the shared secret as a PIN for the smartphone
+8. Filecounter increases for solving the Diffie-Hellman challenge
 
 ## Solve CD / RSA challenge
 
