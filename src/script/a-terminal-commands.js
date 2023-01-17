@@ -139,6 +139,12 @@ function cat() {
 
 function mount() {
     return function (volume) {
+
+        if(!volume) {
+            this.error("Error! Please specify a volume to be mounted.");
+            return;
+        }
+
         const inventory = window.getHarloweVariable("$inventory");
         console.log(inventory);
         var searchFor = "";
