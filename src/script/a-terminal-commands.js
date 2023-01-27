@@ -252,15 +252,21 @@ function connect () {
                 c.echo("\n\n")
                 await c.echo('While you did your number crunching, I was also doing a calculation. My value for b='+b+'! Keep it in mind, you\'ll need it!', {typing: true, keepWords: true, delay: 100 });
 
-                c.read('Please tell me, a=').then(async function(string) {
-                    console.log(string);
+                c.read('Please tell me, a=').then(async function(a) {
+
+                    if(Number(a) < 0 || Number(a) > 22) {
+                        await c.echo('What?! This is impossible. Please try to connect again.', {typing: true, keepWords: true, delay: 100 });
+                        return;
+                    }
+
+                    console.log(a);
                     await c.echo('Thanks! We\'re half way there, but I need you to do one last calculation.', {typing: true, keepWords: true, delay: 100 });
                     c.echo("<math><mrow><mi>k</mi> <mo>=</mo> <msup><mi>b</mi><mi>u</mi></msup> <mo>mod</mo> <mi>p</mi></mrow></math>", {raw: true});
                     c.echo("<math> <mo>&#x21d2;</mo> <mrow><mi>k</mi> <mo>=</mo> <msup><mi>"+b+"</mi><mi>u</mi></msup> <mo>mod</mo> <mi>"+p+"</mi></mrow> </math>", {raw: true});
                     await c.echo('Remember that u is your secret number', {typing: true, keepWords: true, delay: 100 });
                     await c.echo('I was also able to calculate the value of k with my the number you told me. This will be our shared secret from now on!', {typing: true, keepWords: true, delay: 100 });
                     
-                    var k = Math.pow(string, v) % p;
+                    var k = Math.pow(a, v) % p;
                     window.setHarloweVariable("$dhSharedSecret", k);
                 });
             } else {
