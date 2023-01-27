@@ -1,6 +1,10 @@
 :: smartphone [smartphone] {"position":"0,200"}
 
 (if: $dhSharedSecret is 0) [
+    <center>
+    (set: _i to 10)
+    (live: 1s)[(set: _i to _i -1) You will be redirected in _i s.]
+    </center>
     
     <div id="smartphone-container">
         <img src="../images/Smartphone.png"/>
@@ -8,6 +12,7 @@
     </div>
     
     ($theItGuy:"The smartphone is locked. You might have some success by connecting to my old server first. I'll show you the way ... wait!", "guy1")
+    
     (live: 10s)[
         (goto: "pc")
     ]
