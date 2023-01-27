@@ -84,9 +84,12 @@ The CD looks pretty scratched...(show: ?cdContent)
 
 (set: $dhSharedSecret to 0)
 }
-<script>
 
-var term = $('.terminal-container').terminal({
+<script>
+    var script = document.createElement('script');
+    script.src = "../src/script/jquery.terminal.min.js";
+    script.onload = function() {
+        var term = $('.terminal-container').terminal({
     whoami: function () {
         this.echo($name);
     },
@@ -133,6 +136,8 @@ function color(name, string) {
         return string;
     }
 }
+    };
+    document.head.appendChild(script);
 </script>
 <style>
 
