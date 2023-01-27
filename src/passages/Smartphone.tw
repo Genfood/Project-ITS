@@ -23,7 +23,7 @@
 
         (button: "XX==")[(colour: white)[(font:'Courier New')[[back to the lab->lab]]]]
     ]
-    (else:)[(goto: "smartphone")]
+    (else:)[(goto: "inventory")]
 ]
 
 <style>
